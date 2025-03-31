@@ -1,7 +1,7 @@
 :root {
   --background-color: #ffffff;
   --text-color: #333;
-  --main-color: #ff009d;
+  --main-color: #f598d3;
   --secondary-color: #d0ff00;
   --hoover-color: #de3162a2;
   --hoover-background-color: #f6f6f6;
@@ -346,7 +346,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
+  width: 90%;
   max-width: 800px;
   margin: 0 auto 2rem auto;
   gap: 1rem;
@@ -458,7 +458,7 @@ body {
   justify-content: center; /* Center the badges horizontally */
   align-items: center;
   gap: 0.5rem;
-  width: 85%;
+  width: 90%;
   max-width: 800px;
   margin: -1.5rem auto 2rem auto;
   padding: 0.5rem;
@@ -834,7 +834,6 @@ body {
 /* Compact CTA Component Styles */
 .compact-cta-wrapper {
   margin: var(--spacing-lg) auto;
-  padding: 0 var(--spacing-md);
   max-width: 1000px;
   position: relative;
 }
@@ -978,7 +977,6 @@ body {
   box-shadow: var(--box-shadow-card);
   padding: var(--spacing-lg);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -992,11 +990,6 @@ body {
   height: 5px;
   background-color: var(--main-color);
   border-radius: 16px 16px 0 0;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--box-shadow-card-hover);
 }
 
 .service-header {
@@ -1033,56 +1026,44 @@ body {
   flex-grow: 1;
 }
 
-.service-testimonial {
-  background-color: var(--hoover-background-color);
-  border-radius: 10px;
-  padding: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
-  position: relative;
-}
-
-.service-testimonial:before {
-  content: '"';
-  position: absolute;
-  top: -5px;
-  left: 8px;
-  font-size: 2rem;
-  color: var(--main-color);
-  opacity: 0.2;
-  line-height: 1;
-}
-
-.testimonial-stars {
+/* Styles for the new benefit badges */
+.service-benefits {
   display: flex;
-  margin-bottom: 5px;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-md);
+  background-color: rgba(222, 49, 99, 0.05);
+  border-radius: 8px;
+  padding: 0.75rem;
 }
 
-.testimonial-stars .star {
+.benefit-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+}
+
+.benefit-badge i {
   color: var(--main-color);
-  font-size: 12px;
-  margin-right: 2px;
-}
-
-.testimonial-text {
   font-size: 0.9rem;
-  font-style: italic;
-  color: var(--text-color);
-  margin-bottom: 5px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
 }
 
-.testimonial-author {
-  font-size: 0.8rem;
-  text-align: right;
-  color: var(--light-text-color);
+.benefit-badge span {
+  font-size: 0.85rem;
+  color: var(--text-color);
   font-weight: var(--font-weight-medium);
-  margin: 0;
 }
 
 .service-link {
   display: inline-flex;
   align-items: center;
   color: var(--main-color);
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-sm) 0;
   margin-top: auto;
@@ -1167,39 +1148,6 @@ body {
 /* Show all remaining cards when expanded */
 .service-card:nth-child(n + 3).show {
   display: flex;
-}
-
-/* Media Queries for Tablets */
-@media (min-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-  }
-
-  /* Show all cards on tablet+ regardless of show class */
-  .service-card {
-    display: flex;
-  }
-
-  .services-accordion-container {
-    display: none;
-  }
-}
-
-/* Media Queries for Desktops */
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
-}
-
-/* Large Desktops */
-@media (min-width: 1280px) {
-  .services-section .section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 }
 
 /* Enhanced FAQ Section Styles */
@@ -2401,5 +2349,57 @@ body {
 
   .faq-item:hover {
     transform: translateY(-3px);
+  }
+}
+
+/* Media Queries for Tablets */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  /* Show all cards on tablet+ regardless of show class */
+  .service-card {
+    display: flex;
+  }
+
+  .services-accordion-container {
+    display: none;
+  }
+}
+
+/* Media Queries for Desktops */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Large Desktops */
+@media (min-width: 1280px) {
+  .services-section .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .service-benefits {
+    padding: 1rem;
+  }
+
+  .benefit-badge {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .benefit-badge i {
+    font-size: 1rem;
+  }
+
+  .benefit-badge span {
+    font-size: 0.9rem;
   }
 }
