@@ -10,6 +10,77 @@ document.addEventListener("DOMContentLoaded", () => {
   const faqQuestions = document.querySelectorAll(".faq-question");
   initializeCarousel("consultationCarouselTrack", "consultationCarouselDots");
   initializeCarousel("divinatoryCarouselTrack", "divinatoryCarouselDots");
+  // Add this to your main.js file or create a new script
+  // Mobile accordion behavior for services
+  initServiceAccordion("services-section");
+  initServiceAccordion("divinatory-section");
+
+  function initServiceAccordion(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const showMoreButton = section.querySelector(".services-show-more");
+    const cards = section.querySelectorAll(".service-card");
+
+    if (showMoreButton) {
+      showMoreButton.innerHTML = 'Voir plus <i class="fa-solid fa-chevron-down"></i>';
+
+      showMoreButton.addEventListener("click", () => {
+        const isExpanded = showMoreButton.classList.contains("active");
+
+        if (isExpanded) {
+          // Hide all cards beyond the first 2
+          cards.forEach((card, index) => {
+            if (index >= 2) {
+              card.classList.remove("show");
+            }
+          });
+          showMoreButton.innerHTML = 'Voir plus <i class="fa-solid fa-chevron-down"></i>';
+        } else {
+          // Show all remaining cards
+          cards.forEach((card, index) => {
+            if (index >= 2) {
+              card.classList.add("show");
+            }
+          });
+          showMoreButton.innerHTML = 'Voir moins <i class="fa-solid fa-chevron-up"></i>';
+        }
+
+        showMoreButton.classList.toggle("active");
+
+        // Smooth scroll to the third card when expanding
+        if (!isExpanded) {
+          const thirdCard = cards[2];
+          if (thirdCard) {
+            setTimeout(() => {
+              thirdCard.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 100);
+          }
+        }
+      });
+    }
+  }
+
+  // Optional: Add animation when cards come into view
+  if ("IntersectionObserver" in window) {
+    const serviceCards = document.querySelectorAll(".service-card");
+
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    serviceCards.forEach((card) => {
+      cardObserver.observe(card);
+    });
+  }
 
   // Add click event to each FAQ question
   faqQuestions.forEach((question) => {

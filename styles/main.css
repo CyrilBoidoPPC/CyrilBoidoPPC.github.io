@@ -524,7 +524,6 @@ body {
 /* Testimonials Section - Updated Styles */
 .testimonials-section {
   padding: var(--spacing-lg) 0;
-  background-color: var(--background-color);
   overflow: hidden; /* Prevent horizontal scrollbar */
 }
 
@@ -585,7 +584,7 @@ body {
 /* Testimonial Content Styling */
 .testimonial-content {
   width: 100%;
-  background-color: var(--hoover-background-color);
+  background-color: var(--background-color);
   border-radius: 12px;
   box-shadow: var(--box-shadow-card);
   padding: var(--spacing-lg);
@@ -664,7 +663,6 @@ body {
   border-radius: 4px;
   background-color: #f9f9f9;
   margin-top: auto; /* Push to bottom */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* Author Avatar */
@@ -960,127 +958,95 @@ body {
   transform: translateY(-2px);
 }
 
-/* Individual Carousel Card */
-.carousel-card {
-  flex: 0 0 90%;
-  min-width: 90%;
-  height: 100%;
-  padding-right: 15px; /* This creates the peek effect for the next card */
-  box-sizing: border-box;
-} /* Carousel Sections */
-
-.consultation-carousel-section,
-.divinatory-carousel-section {
+/* Services Grid Section Styles */
+.services-section {
   padding: var(--spacing-xl) 0;
   background-color: var(--background-color);
   overflow: hidden;
 }
 
-.consultation-carousel-section {
-  padding-bottom: var(--spacing-xxl);
-}
-
-.divinatory-carousel-section {
-  padding-top: var(--spacing-xxl);
-}
-
-/* Carousel Container */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  overflow: visible;
-  padding-bottom: var(--spacing-xl);
-}
-
-/* Carousel Track - Contains all cards */
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  height: 75vh;
-  max-height: 600px;
-  padding-left: 5%;
-}
-
-/* Card Content */
-.card-content {
-  height: 100%;
-  background: var(--hoover-background-color);
-  border-radius: 20px;
-  box-shadow: var(--box-shadow-card);
-  padding: var(--spacing-xl);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-card:hover .card-content {
-  box-shadow: var(--box-shadow-card-hover);
-}
-
-/* Card Icon */
-.card-icon {
-  font-size: 4rem;
-  color: var(--main-color);
-  margin-bottom: var(--spacing-md);
-  height: 4.5rem;
-  width: 4.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(222, 49, 99, 0.1);
-  border-radius: 50%;
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
 }
 
-/* Card Divider - Line between icon and title */
-.card-divider {
-  width: 50px;
-  height: 3px;
-  background-color: var(--main-color);
-  margin: var(--spacing-md) 0;
-  border-radius: 2px;
-}
-
-/* Card Title */
-.card-title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-color);
-  margin-bottom: var(--spacing-md);
-}
-
-/* Card Description */
-.card-description {
-  font-size: var(--font-size-base);
-  color: var(--light-text-color);
-  line-height: var(--line-height-normal);
-  margin-bottom: auto;
-  padding-bottom: var(--spacing-md);
-}
-
-/* Card Testimonial */
-.card-testimonial {
-  background-color: var(--background-color);
+.service-card {
+  background-color: white;
+  border-radius: 16px;
   box-shadow: var(--box-shadow-card);
-  padding: var(--spacing-md);
-  border-radius: 8px;
-  margin-top: auto;
+  padding: var(--spacing-lg);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.service-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--main-color);
+  border-radius: 16px 16px 0 0;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-card-hover);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-icon {
+  background-color: rgba(255, 0, 157, 0.1);
+  color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.service-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.service-description {
+  color: var(--light-text-color);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.service-testimonial {
+  background-color: var(--hoover-background-color);
+  border-radius: 10px;
+  padding: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
   position: relative;
-  width: 100%;
 }
 
-.card-testimonial:before {
+.service-testimonial:before {
   content: '"';
   position: absolute;
-  top: -10px;
-  left: 10px;
-  font-size: 3rem;
+  top: -5px;
+  left: 8px;
+  font-size: 2rem;
   color: var(--main-color);
   opacity: 0.2;
   line-height: 1;
@@ -1088,21 +1054,20 @@ body {
 
 .testimonial-stars {
   display: flex;
-  justify-content: center;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 5px;
 }
 
 .testimonial-stars .star {
   color: var(--main-color);
   font-size: 12px;
-  margin: 0 1px;
+  margin-right: 2px;
 }
 
 .testimonial-text {
   font-size: 0.9rem;
   font-style: italic;
   color: var(--text-color);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 5px;
 }
 
 .testimonial-author {
@@ -1110,152 +1075,285 @@ body {
   text-align: right;
   color: var(--light-text-color);
   font-weight: var(--font-weight-medium);
-  display: flex;
+  margin: 0;
+}
+
+.service-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
-}
-
-.testimonial-author .testimonial-stars {
-  margin-right: 5px;
-  margin-bottom: 0;
-}
-
-/* Card Link at the very bottom */
-.card-link {
   color: var(--main-color);
   text-decoration: none;
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-base);
   padding: var(--spacing-sm) 0;
-  transition: all 0.3s ease;
   margin-top: auto;
-  margin-bottom: var(--spacing-md);
-  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.card-link i {
-  margin-left: 0.3rem;
+.service-link i {
+  margin-left: 0.5rem;
   transition: transform 0.3s ease;
 }
 
-.card-link:hover {
+.service-link:hover {
   color: var(--hoover-color);
 }
 
-.card-link:hover i {
+.service-link:hover i {
   transform: translateX(4px);
 }
 
-.carousel-prev,
-.carousel-next {
+.service-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 0, 157, 0.1);
+  color: var(--main-color);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.service-badge i {
+  margin-right: 4px;
+  font-size: 0.8rem;
+}
+
+/* Mobile accordion view styles */
+.services-accordion-container {
+  text-align: center;
+  margin-top: var(--spacing-md);
+  display: block;
+}
+
+.services-show-more {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.services-show-more i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.services-show-more:hover {
+  background-color: rgba(255, 0, 157, 0.1);
+}
+
+.services-show-more.active i {
+  transform: rotate(180deg);
+}
+
+/* Initially hide cards beyond the first 2 on mobile */
+.service-card {
   display: none;
 }
 
-/* Pagination Dots */
-.carousel-dots {
+/* Show first 2 cards by default */
+.service-card:nth-child(-n + 2) {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: var(--spacing-md);
 }
 
-.carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #ccc;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* Show all remaining cards when expanded */
+.service-card:nth-child(n + 3).show {
+  display: flex;
 }
 
-.carousel-dot.active {
-  background-color: var(--main-color);
-  width: 10px;
-  height: 10px;
+/* Media Queries for Tablets */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  /* Show all cards on tablet+ regardless of show class */
+  .service-card {
+    display: flex;
+  }
+
+  .services-accordion-container {
+    display: none;
+  }
 }
 
-/* FAQ Section Styles */
-.faq-section {
-  padding: var(--spacing-xl) 0;
-  background-color: var(--background-color);
+/* Media Queries for Desktops */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
 }
 
+/* Large Desktops */
+@media (min-width: 1280px) {
+  .services-section .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Enhanced FAQ Section Styles */
+
+/* Main container refinements */
 .faq-container {
   margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* FAQ Item styling */
 .faq-item {
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: var(--box-shadow-card);
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   overflow: hidden;
-  background-color: var(--hoover-background-color);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: white;
+  border-left: 3px solid var(--main-color);
 }
 
+.faq-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Question button styling */
 .faq-question {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-lg);
-  background-color: var(--hoover-background-color);
+  padding: 1.25rem;
+  background-color: white;
   border: none;
   text-align: left;
   cursor: pointer;
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-base);
+  font-weight: 600;
+  font-size: 1.05rem;
   color: var(--text-color);
   transition: all 0.3s ease;
 }
 
 .faq-question:hover {
-  background-color: rgba(222, 49, 99, 0.05);
+  background-color: rgba(255, 0, 157, 0.05);
 }
 
 .faq-question span {
   flex: 1;
   padding-right: var(--spacing-md);
+  line-height: 1.4;
 }
 
+/* Chevron icon styling */
 .faq-question i {
   color: var(--main-color);
-  font-size: var(--font-size-base);
+  font-size: 1.1rem;
   transition: transform 0.3s ease;
+  background-color: rgba(255, 0, 157, 0.1);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .faq-question[aria-expanded="true"] i {
   transform: rotate(180deg);
+  background-color: var(--main-color);
+  color: white;
 }
 
+/* Active state for question */
+.faq-question[aria-expanded="true"] {
+  background-color: rgba(255, 0, 157, 0.03);
+  border-bottom: 1px solid rgba(255, 0, 157, 0.1);
+}
+
+/* Answer container */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding: 0 var(--spacing-lg);
+  background-color: white;
 }
 
 .faq-answer.active {
-  max-height: 1000px; /* Large enough to accommodate content */
+  max-height: 1000px;
   padding: 0 var(--spacing-lg) var(--spacing-lg);
 }
 
+/* Answer content styling */
 .faq-answer p {
   margin-bottom: var(--spacing-md);
   color: var(--text-color);
-  line-height: var(--line-height-normal);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.faq-answer p:first-child {
+  margin-top: var(--spacing-md);
 }
 
 .faq-answer ul,
 .faq-answer ol {
-  margin-left: var(--spacing-lg);
+  margin-left: var(--spacing-xs);
   margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
 }
 
 .faq-answer li {
   margin-bottom: var(--spacing-xs);
   color: var(--text-color);
-  line-height: var(--line-height-normal);
+  line-height: 1.5;
+  opacity: 0.9;
+  position: relative;
+}
+
+/* Style list markers */
+.faq-answer ul li::before {
+  content: "•";
+  color: var(--main-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  position: absolute;
+  left: -0.5em;
+}
+
+.faq-answer ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.faq-answer ol li {
+  counter-increment: item;
+}
+
+.faq-answer ol li::before {
+  content: counter(item) ".";
+  color: var(--main-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1.5em;
+  position: absolute;
+  left: 0;
 }
 
 /* SEO Content Styles */
@@ -2268,5 +2366,40 @@ body {
 
   .testimonial-next {
     right: 15%;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .faq-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-question {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .faq-answer.active {
+    padding: 0.5rem var(--spacing-xl) var(--spacing-xl);
+  }
+
+  .faq-answer p,
+  .faq-answer li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq-container {
+    max-width: 900px;
+  }
+
+  .faq-item {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateY(-3px);
   }
 }
