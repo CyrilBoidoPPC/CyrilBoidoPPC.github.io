@@ -179,14 +179,31 @@ document.addEventListener("DOMContentLoaded", () => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  testimonialsTrack.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
+  testimonialsTrack.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    },
+    { passive: false }
+  );
 
-  testimonialsTrack.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
+  testimonialsTrack.addEventListener(
+    "touchmove",
+    (e) => {
+      e.preventDefault();
+    },
+    { passive: false }
+  );
+
+  testimonialsTrack.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    },
+    { passive: false }
+  );
 
   const handleSwipe = () => {
     const swipeThreshold = 50;
