@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
   <head>
     <!-- Tu n'as rien à faire ici.. -->
     <!-- Required meta tags for character encoding and mobile-first approach -->
     <meta charset="UTF-8" />
     <title>Voyance Gratuite par Téléphone | Consultation Médium | Clairvoyances</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to your head section:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /> -->
     <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="dns-prefetch preconnect" href="https://www.googletagmanager.com" crossorigin />
 
@@ -352,7 +354,8 @@
     </header>
 
     <main>
-      <section class="hero">
+      <!-- Combined hero section -->
+      <section class="hero" id="hero-section">
         <div class="hero-content">
           <h1>Voyance en ligne</h1>
           <h2>Consultations sérieuses par téléphone</h2>
@@ -391,16 +394,13 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="hero-image-section">
         <div class="hero-image-container">
           <img
             src="images/hero.png"
-            alt="Consultation de voyance personnalisée"
+            alt="Consultation personnalisée avec un voyant professionnel pour prédictions sur l'amour et le travail"
             width="600"
             height="900"
-            loading="lazy" />
-          <!-- not lazy, it is hero image -->
+            fetchpriority="high" />
         </div>
       </section>
       <!-- Testimonials Section -->
@@ -713,35 +713,36 @@
             <div class="compact-cta-container">
               <div class="compact-cta-content">
                 <h3 class="compact-cta-title">Que voulez-vous savoir aujourd'hui ?</h3>
-                
+
                 <form class="compact-cta-form" action="/question-de-voyance" method="post">
                   <div class="compact-cta-input-wrapper">
-                    <input 
-                      type="text" 
-                      id="compactQuestion" 
-                      name="userQuestion" 
-                      placeholder="Posez votre question..." 
-                      aria-label="Votre question de voyance" 
-                      maxlength="200" 
-                      required
-                    />
+                    <input
+                      type="text"
+                      id="compactQuestion"
+                      name="userQuestion"
+                      placeholder="Posez votre question..."
+                      aria-label="Votre question de voyance"
+                      maxlength="200"
+                      required />
                     <button type="button" class="clear-button compact" aria-label="Effacer le texte">
                       <i class="fa-solid fa-times"></i>
                     </button>
                   </div>
-                  
+
                   <div class="compact-cta-actions">
                     <button type="submit" class="compact-cta-button primary">
-                      Je pose ma question gratuitement <i class="fa-solid fa-arrow-right"></i>
+                      Je pose ma question gratuitement
+                      <i class="fa-solid fa-arrow-right"></i>
                     </button>
                     <a href="tel:+33423092423" class="compact-cta-button secondary">
-                      <i class="fa-solid fa-phone"></i> 04 23 09 24 23
+                      <i class="fa-solid fa-phone"></i>
+                      04 23 09 24 23
                     </a>
                   </div>
                 </form>
               </div>
             </div>
-            
+
             <div class="badges-container compact">
               <div class="trust-badge">
                 <i class="fa-solid fa-star"></i>
@@ -753,456 +754,457 @@
               </div>
             </div>
           </div>
-
+        </div>
       </section>
-<!-- Services Grid Section -->
-<section class="services-section" id="services-section">
-  <div class="section-container">
-    <h2 class="section-title">Nos modes de consultation</h2>
-    <p class="section-subtitle">Choisissez la méthode qui vous convient le mieux pour votre consultation</p>
+      <!-- Services Grid Section -->
+      <section class="services-section" id="services-section">
+        <div class="section-container">
+          <h2 class="section-title">Nos modes de consultation</h2>
+          <p class="section-subtitle">Choisissez la méthode qui vous convient le mieux pour votre consultation</p>
 
-    <div class="services-grid">
-      <!-- Service Card 1: Question Gratuite -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-question"></i>
-          </div>
-          <h3 class="service-title">Question gratuite</h3>
-        </div>
-        <p class="service-description">
-          Posez votre première question sans frais et recevez une réponse claire et personnalisée de la part
-          de nos voyants expérimentés.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-check-circle"></i>
-            <span>Sans engagement</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-clock"></i>
-            <span>Réponse rapide</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-arrow-right"></i>
-            <span>Premier pas vers la clarté</span>
-          </div>
-        </div>
-        <a href="/question-de-voyance" class="service-link">
-          Poser ma question gratuite
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-star"></i>
-          <span class="badge-text">98% satisfaction</span>
-        </div>
-      </div>
+          <div class="services-grid">
+            <!-- Service Card 1: Question Gratuite -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-question"></i>
+                </div>
+                <h3 class="service-title">Question gratuite</h3>
+              </div>
+              <p class="service-description">
+                Posez votre première question sans frais et recevez une réponse claire et personnalisée de la part de
+                nos voyants expérimentés.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>Sans engagement</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Réponse rapide</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span>Premier pas vers la clarté</span>
+                </div>
+              </div>
+              <a href="/question-de-voyance" class="service-link">
+                Poser ma question gratuite
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-star"></i>
+                <span class="badge-text">98% satisfaction</span>
+              </div>
+            </div>
 
-      <!-- Service Card 2: Par Téléphone -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
+            <!-- Service Card 2: Par Téléphone -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
 
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <h3 class="service-title">Par téléphone</h3>
-        </div>
-        <p class="service-description">
-          Échangez directement avec un voyant par téléphone pour une consultation personnalisée sans attente
-          et en toute confidentialité.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-user-check"></i>
-            <span>Échange direct</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-clock"></i>
-            <span>Sans attente</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-shield-alt"></i>
-            <span>Connexion privilégiée</span>
-          </div>
-        </div>
-        <a href="/voyance-telephone" class="service-link">
-          Consulter par téléphone
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-headset"></i>
-          <span class="badge-text">Disponible 24/7</span>
-        </div>
-      </div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3 class="service-title">Par téléphone</h3>
+              </div>
+              <p class="service-description">
+                Échangez directement avec un voyant par téléphone pour une consultation personnalisée sans attente et en
+                toute confidentialité.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-user-check"></i>
+                  <span>Échange direct</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Sans attente</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-shield-alt"></i>
+                  <span>Connexion privilégiée</span>
+                </div>
+              </div>
+              <a href="/voyance-telephone" class="service-link">
+                Consulter par téléphone
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-headset"></i>
+                <span class="badge-text">Disponible 24/7</span>
+              </div>
+            </div>
 
-      <!-- Service Card 3: Se faire rappeler -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
+            <!-- Service Card 3: Se faire rappeler -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
 
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-phone-volume"></i>
-          </div>
-          <h3 class="service-title">Se faire rappeler</h3>
-        </div>
-        <p class="service-description">
-          Laissez vos coordonnées et un voyant vous recontactera immédiatement pour une consultation dans les
-          plus brefs délais.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-clock"></i>
-            <span>Rappel sous 5 minutes</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span>À votre convenance</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-headset"></i>
-            <span>Service prioritaire</span>
-          </div>
-        </div>
-        <a href="/demande-rappel" class="service-link">
-          Demander un rappel
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-clock"></i>
-          <span class="badge-text">Rappel 5 min</span>
-        </div>
-      </div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <h3 class="service-title">Se faire rappeler</h3>
+              </div>
+              <p class="service-description">
+                Laissez vos coordonnées et un voyant vous recontactera immédiatement pour une consultation dans les plus
+                brefs délais.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Rappel sous 5 minutes</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <span>À votre convenance</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-headset"></i>
+                  <span>Service prioritaire</span>
+                </div>
+              </div>
+              <a href="/demande-rappel" class="service-link">
+                Demander un rappel
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-clock"></i>
+                <span class="badge-text">Rappel 5 min</span>
+              </div>
+            </div>
 
-      <!-- Service Card 4: Par Tchat -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
+            <!-- Service Card 4: Par Tchat -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
 
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-comments"></i>
-          </div>
-          <h3 class="service-title">Par tchat</h3>
-        </div>
-        <p class="service-description">
-          Communiquez discrètement avec un voyant par messagerie instantanée pour une consultation écrite et
-          détaillée.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-user-secret"></i>
-            <span>Discrétion totale</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-file-alt"></i>
-            <span>Transcription conservée</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-mobile-alt"></i>
-            <span>Accessible partout</span>
-          </div>
-        </div>
-        <a href="/voyance-par-tchat" class="service-link">
-          Démarrer un tchat
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-lock"></i>
-          <span class="badge-text">100% discret</span>
-        </div>
-      </div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <h3 class="service-title">Par tchat</h3>
+              </div>
+              <p class="service-description">
+                Communiquez discrètement avec un voyant par messagerie instantanée pour une consultation écrite et
+                détaillée.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-user-secret"></i>
+                  <span>Discrétion totale</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-file-alt"></i>
+                  <span>Transcription conservée</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-mobile-alt"></i>
+                  <span>Accessible partout</span>
+                </div>
+              </div>
+              <a href="/voyance-par-tchat" class="service-link">
+                Démarrer un tchat
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-lock"></i>
+                <span class="badge-text">100% discret</span>
+              </div>
+            </div>
 
-      <!-- Service Card 5: Sans CB -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
+            <!-- Service Card 5: Sans CB -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
 
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-credit-card"></i>
-          </div>
-          <h3 class="service-title">Sans CB</h3>
-        </div>
-        <p class="service-description">
-          Accédez à nos services de voyance sans carte bancaire, avec des options de paiement alternatives
-          pour votre confort.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-shield-alt"></i>
-            <span>Paiement sécurisé</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-wallet"></i>
-            <span>Options multiples</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-lock"></i>
-            <span>Sans abonnement</span>
-          </div>
-        </div>
-        <a href="/voyance-sans-cb" class="service-link">
-          Consulter sans CB
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-shield-alt"></i>
-          <span class="badge-text">Sécurisé</span>
-        </div>
-      </div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <h3 class="service-title">Sans CB</h3>
+              </div>
+              <p class="service-description">
+                Accédez à nos services de voyance sans carte bancaire, avec des options de paiement alternatives pour
+                votre confort.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-shield-alt"></i>
+                  <span>Paiement sécurisé</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-wallet"></i>
+                  <span>Options multiples</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>Sans abonnement</span>
+                </div>
+              </div>
+              <a href="/voyance-sans-cb" class="service-link">
+                Consulter sans CB
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-shield-alt"></i>
+                <span class="badge-text">Sécurisé</span>
+              </div>
+            </div>
 
-      <!-- Service Card 6: Par SMS -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
+            <!-- Service Card 6: Par SMS -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
 
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-sms"></i>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-sms"></i>
+                </div>
+                <h3 class="service-title">Par SMS</h3>
+              </div>
+              <p class="service-description">
+                Recevez des réponses concises à vos questions où que vous soyez, directement sur votre téléphone par
+                SMS.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span>Réponses instantanées</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-mobile-alt"></i>
+                  <span>Format pratique</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-comments"></i>
+                  <span>Suivi personnalisé</span>
+                </div>
+              </div>
+              <a href="/voyance-par-sms" class="service-link">
+                Consulter par SMS
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-bolt"></i>
+                <span class="badge-text">Réponse rapide</span>
+              </div>
+            </div>
           </div>
-          <h3 class="service-title">Par SMS</h3>
-        </div>
-        <p class="service-description">
-          Recevez des réponses concises à vos questions où que vous soyez, directement sur votre téléphone par
-          SMS.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-bolt"></i>
-            <span>Réponses instantanées</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-mobile-alt"></i>
-            <span>Format pratique</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-comments"></i>
-            <span>Suivi personnalisé</span>
-          </div>
-        </div>
-        <a href="/voyance-par-sms" class="service-link">
-          Consulter par SMS
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-bolt"></i>
-          <span class="badge-text">Réponse rapide</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Collapsed Mobile View Toggle (Optional) -->
-    <div class="services-accordion-container">
-      <button class="services-show-more">
-        Voir plus
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-  </div>
-</section>
-<!-- Arts Divinatoires Grid Section -->
-<!-- Arts Divinatoires Grid Section -->
-<section class="services-section divinatory-section" id="divinatory-section">
-  <div class="section-container">
-    <h2 class="section-title">Arts divinatoires</h2>
-    <p class="section-subtitle">Explorez nos différentes méthodes de prédiction et d'interprétation</p>
+          <!-- Collapsed Mobile View Toggle (Optional) -->
+          <div class="services-accordion-container">
+            <button class="services-show-more">
+              Voir plus
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Arts Divinatoires Grid Section -->
+      <!-- Arts Divinatoires Grid Section -->
+      <section class="services-section divinatory-section" id="divinatory-section">
+        <div class="section-container">
+          <h2 class="section-title">Arts divinatoires</h2>
+          <p class="section-subtitle">Explorez nos différentes méthodes de prédiction et d'interprétation</p>
 
-    <div class="services-grid">
-      <!-- Divinatory Card 1: Voyance -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-eye"></i>
-          </div>
-          <h3 class="service-title">Voyance</h3>
-        </div>
-        <p class="service-description">
-          Découvrez votre passé, présent et futur grâce aux révélations de nos voyants qui perçoivent au-delà
-          du visible.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-eye"></i>
-            <span>Vision précise</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-hourglass"></i>
-            <span>Passé, présent, futur</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-lightbulb"></i>
-            <span>Révélations éclairantes</span>
-          </div>
-        </div>
-        <a href="/voyance" class="service-link">
-          En savoir plus sur la voyance
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-eye"></i>
-          <span class="badge-text">Précision 95%</span>
-        </div>
-      </div>
+          <div class="services-grid">
+            <!-- Divinatory Card 1: Voyance -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3 class="service-title">Voyance</h3>
+              </div>
+              <p class="service-description">
+                Découvrez votre passé, présent et futur grâce aux révélations de nos voyants qui perçoivent au-delà du
+                visible.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>Vision précise</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-hourglass"></i>
+                  <span>Passé, présent, futur</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <span>Révélations éclairantes</span>
+                </div>
+              </div>
+              <a href="/voyance" class="service-link">
+                En savoir plus sur la voyance
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-eye"></i>
+                <span class="badge-text">Précision 95%</span>
+              </div>
+            </div>
 
-      <!-- Divinatory Card 2: Médiumnité -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-hands-holding-child"></i>
-          </div>
-          <h3 class="service-title">Médiumnité</h3>
-        </div>
-        <p class="service-description">
-          Établissez un contact avec le monde spirituel grâce à nos médiums qui servent de canal entre les
-          énergies et vous.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-hands-holding-child"></i>
-            <span>Contact spirituel</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-heart"></i>
-            <span>Messages réconfortants</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-infinity"></i>
-            <span>Connexion au-delà</span>
-          </div>
-        </div>
-        <a href="/medium" class="service-link">
-          Découvrir la médiumnité
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-heart"></i>
-          <span class="badge-text">Connexion profonde</span>
-        </div>
-      </div>
+            <!-- Divinatory Card 2: Médiumnité -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-hands-holding-child"></i>
+                </div>
+                <h3 class="service-title">Médiumnité</h3>
+              </div>
+              <p class="service-description">
+                Établissez un contact avec le monde spirituel grâce à nos médiums qui servent de canal entre les
+                énergies et vous.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-hands-holding-child"></i>
+                  <span>Contact spirituel</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Messages réconfortants</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-infinity"></i>
+                  <span>Connexion au-delà</span>
+                </div>
+              </div>
+              <a href="/medium" class="service-link">
+                Découvrir la médiumnité
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-heart"></i>
+                <span class="badge-text">Connexion profonde</span>
+              </div>
+            </div>
 
-      <!-- Divinatory Card 3: Tarologie -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-rectangle-list"></i>
-          </div>
-          <h3 class="service-title">Tarologie</h3>
-        </div>
-        <p class="service-description">
-          Laissez-vous guider par les arcanes du Tarot qui révèlent les influences subtiles et les chemins
-          possibles de votre destin.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-rectangle-list"></i>
-            <span>Lecture précise</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-map"></i>
-            <span>Guide décisionnel</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span>Symbolisme puissant</span>
-          </div>
-        </div>
-        <a href="/tarot" class="service-link">
-          Explorer le Tarot
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-          <span class="badge-text">Lecture experte</span>
-        </div>
-      </div>
+            <!-- Divinatory Card 3: Tarologie -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-rectangle-list"></i>
+                </div>
+                <h3 class="service-title">Tarologie</h3>
+              </div>
+              <p class="service-description">
+                Laissez-vous guider par les arcanes du Tarot qui révèlent les influences subtiles et les chemins
+                possibles de votre destin.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-rectangle-list"></i>
+                  <span>Lecture précise</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-map"></i>
+                  <span>Guide décisionnel</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <span>Symbolisme puissant</span>
+                </div>
+              </div>
+              <a href="/tarot" class="service-link">
+                Explorer le Tarot
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span class="badge-text">Lecture experte</span>
+              </div>
+            </div>
 
-      <!-- Divinatory Card 4: Numérologie -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-hashtag"></i>
-          </div>
-          <h3 class="service-title">Numérologie</h3>
-        </div>
-        <p class="service-description">
-          Comprenez l'influence des chiffres sur votre personnalité, vos talents et votre destinée grâce à
-          cette science ancestrale.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-hashtag"></i>
-            <span>Analyse personnelle</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-road"></i>
-            <span>Chemin de vie</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-calculator"></i>
-            <span>Compatibilité précise</span>
-          </div>
-        </div>
-        <a href="/numerologie" class="service-link">
-          Comprendre la numérologie
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-calculator"></i>
-          <span class="badge-text">Analyse détaillée</span>
-        </div>
-      </div>
+            <!-- Divinatory Card 4: Numérologie -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-hashtag"></i>
+                </div>
+                <h3 class="service-title">Numérologie</h3>
+              </div>
+              <p class="service-description">
+                Comprenez l'influence des chiffres sur votre personnalité, vos talents et votre destinée grâce à cette
+                science ancestrale.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-hashtag"></i>
+                  <span>Analyse personnelle</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-road"></i>
+                  <span>Chemin de vie</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-calculator"></i>
+                  <span>Compatibilité précise</span>
+                </div>
+              </div>
+              <a href="/numerologie" class="service-link">
+                Comprendre la numérologie
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-calculator"></i>
+                <span class="badge-text">Analyse détaillée</span>
+              </div>
+            </div>
 
-      <!-- Divinatory Card 5: Astrologie -->
-      <div class="service-card">
-        <div class="service-border-top"></div>
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fa-solid fa-star"></i>
+            <!-- Divinatory Card 5: Astrologie -->
+            <div class="service-card">
+              <div class="service-border-top"></div>
+              <div class="service-header">
+                <div class="service-icon">
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="service-title">Astrologie</h3>
+              </div>
+              <p class="service-description">
+                Explorez l'influence des astres sur votre vie et découvrez les messages que le cosmos vous réserve pour
+                éclairer votre chemin.
+              </p>
+              <div class="service-benefits">
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-star"></i>
+                  <span>Thème natal complet</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-moon"></i>
+                  <span>Influence planétaire</span>
+                </div>
+                <div class="benefit-badge">
+                  <i class="fa-solid fa-sun"></i>
+                  <span>Prévisions cycliques</span>
+                </div>
+              </div>
+              <a href="/astrologie" class="service-link">
+                Consulter l'astrologie
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div class="service-badge">
+                <i class="fa-solid fa-moon"></i>
+                <span class="badge-text">Thème complet</span>
+              </div>
+            </div>
           </div>
-          <h3 class="service-title">Astrologie</h3>
-        </div>
-        <p class="service-description">
-          Explorez l'influence des astres sur votre vie et découvrez les messages que le cosmos vous réserve
-          pour éclairer votre chemin.
-        </p>
-        <div class="service-benefits">
-          <div class="benefit-badge">
-            <i class="fa-solid fa-star"></i>
-            <span>Thème natal complet</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-moon"></i>
-            <span>Influence planétaire</span>
-          </div>
-          <div class="benefit-badge">
-            <i class="fa-solid fa-sun"></i>
-            <span>Prévisions cycliques</span>
-          </div>
-        </div>
-        <a href="/astrologie" class="service-link">
-          Consulter l'astrologie
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <div class="service-badge">
-          <i class="fa-solid fa-moon"></i>
-          <span class="badge-text">Thème complet</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Collapsed Mobile View Toggle -->
-    <div class="services-accordion-container">
-      <button class="services-show-more">
-        Voir plus
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-  </div>
-</section>
+          <!-- Collapsed Mobile View Toggle -->
+          <div class="services-accordion-container">
+            <button class="services-show-more">
+              Voir plus
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+      </section>
       <!-- FAQ Section with SEO Content -->
+      <!-- FAQ Section with Questions -->
       <section class="faq-section" id="faq">
         <div class="section-container">
           <h2 class="section-title">Questions fréquentes</h2>
@@ -1383,9 +1385,13 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- SEO Content Section -->
-          <section class="seo-content">
+      <!-- SEO Content Section (as a separate section) -->
+      <section class="seo-section">
+        <div class="section-container">
+          <div class="seo-content">
             <h2>La voyance, un éclairage sur votre chemin de vie</h2>
             <p>
               Depuis des millénaires, la voyance accompagne l'humanité dans sa quête de sens et de direction.
@@ -1496,40 +1502,41 @@
               La voyance est un outil puissant de développement personnel qui, utilisé avec discernement, peut vous
               aider à naviguer à travers les défis de la vie avec plus de clarté et de confiance.
             </p>
-          </section>
+          </div>
           <div class="compact-cta-wrapper">
             <div class="compact-cta-container">
               <div class="compact-cta-content">
                 <h3 class="compact-cta-title">Que voulez-vous savoir aujourd'hui ?</h3>
-                
+
                 <form class="compact-cta-form" action="/question-de-voyance" method="post">
                   <div class="compact-cta-input-wrapper">
-                    <input 
-                      type="text" 
-                      id="compactQuestion" 
-                      name="userQuestion" 
-                      placeholder="Posez votre question..." 
-                      aria-label="Votre question de voyance" 
-                      maxlength="200" 
-                      required
-                    />
+                    <input
+                      type="text"
+                      id="compactQuestion"
+                      name="userQuestion"
+                      placeholder="Posez votre question..."
+                      aria-label="Votre question de voyance"
+                      maxlength="200"
+                      required />
                     <button type="button" class="clear-button compact" aria-label="Effacer le texte">
                       <i class="fa-solid fa-times"></i>
                     </button>
                   </div>
-                  
+
                   <div class="compact-cta-actions">
                     <button type="submit" class="compact-cta-button primary">
-                      Je pose ma question gratuitement <i class="fa-solid fa-arrow-right"></i>
+                      Je pose ma question gratuitement
+                      <i class="fa-solid fa-arrow-right"></i>
                     </button>
                     <a href="tel:+33423092423" class="compact-cta-button secondary">
-                      <i class="fa-solid fa-phone"></i> 04 23 09 24 23
+                      <i class="fa-solid fa-phone"></i>
+                      04 23 09 24 23
                     </a>
                   </div>
                 </form>
               </div>
             </div>
-            
+
             <div class="badges-container compact">
               <div class="trust-badge">
                 <i class="fa-solid fa-star"></i>

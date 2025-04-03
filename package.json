@@ -1,0 +1,27 @@
+{
+  "name": "clairvoyances.fr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyrilBoidoPPC/WEBSITE---Clairvoyances.fr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyrilBoidoPPC/WEBSITE---Clairvoyances.fr/issues"
+  },
+  "homepage": "https://github.com/CyrilBoidoPPC/WEBSITE---Clairvoyances.fr#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.2.4",
+    "vite-plugin-purgecss": "^0.2.13"
+  }
+}
