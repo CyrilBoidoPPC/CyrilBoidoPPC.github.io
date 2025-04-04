@@ -2,27 +2,24 @@
 <html lang="fr-FR">
   <head>
     <!-- Tu n'as rien à faire ici.. -->
-    <!-- Required meta tags for character encoding and mobile-first approach -->
     <meta charset="UTF-8" />
-    <title>Voyance Gratuite par Téléphone | Consultation Médium | Clairvoyances</title>
+    <title>Voyance en ligne | Consultations sérieuses | Clairvoyances.fr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Add this to your head section:
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="dns-prefetch preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch preconnect" href="https://kit.fontawesome.com" crossorigin />
 
-    <!-- Canonical URL to avoid duplicate content issues -->
     <link rel="canonical" href="https://www.clairvoyances.fr" />
 
-    <!-- Stylesheet / Javascript-->
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/f53fcda9ae.js" crossorigin="anonymous"></script>
-    <script src="/scripts/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/f53fcda9ae.js" crossorigin="anonymous" async></script>
+    <script type="module" src="/scripts/main.js"></script>
 
     <!-- Primary meta tags for SEO -->
     <meta
@@ -32,14 +29,11 @@
       name="keywords"
       content="voyance en ligne, voyance, médium, voyant, consultation voyance, voyance par téléphone, tarot, numérologie" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"> -->
-    <!-- <link rel="mask-icon" href="https://static.glami.cz/css/images/glami-logo/logo-mark-asterisk.svg" color="#853CFF"> -->
-    <meta name="theme-color" content="#DE3163" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Clairvoyances" />
-
-    <!-- Hreflang for language targeting -->
-    <link rel="alternate" hreflang="fr" href="https://www.clairvoyances.fr" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/images/clairvoyances-icon.svg" color="#ff4081" />
+    <meta name="theme-color" content="#ff4081" />
+    <meta name="robots" content="index, follow max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    " />
 
     <!-- Open Graph metadata for social sharing (Facebook, LinkedIn, etc.) -->
     <meta property="og:title" content="Voyance Gratuite par Téléphone | Consultation Médium | Clairvoyances" />
@@ -140,27 +134,39 @@
       <nav class="navbar" aria-label="Navigation principale">
         <a class="header-logo" href="/" title="Accueil Clairvoyances">
           <img
-            src="images\clairvoyances logo rectangle.png"
-            alt="Logo Clairvoyances - Service de voyance et médiumnité"
+            src="images/clairvoyances logo rectangle.png"
+            alt="Logo Clairvoyances - Service de voyance en ligne"
             width="200"
             height="80" />
         </a>
 
-        <ul class="navbar-menu">
+        <button class="hamburger-menu" aria-label="Menu principal" aria-expanded="false" aria-controls="navbar-menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <ul class="navbar-menu" id="navbar-menu">
           <li class="dropdown">
-            <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <button
+              class="dropdown-toggle"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="consultations-menu">
               <div class="main-menu-content">
                 <span class="main-menu-title">Consultez aujourd'hui</span>
                 <span class="main-menu-description">Différentes options de consultation disponibles</span>
               </div>
-              <span class="caret">
-                <svg
-                  width="12"
-                  height="8"
-                  viewBox="0 0 12 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true">
+              <span class="caret" aria-hidden="true">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1 1 L6 6 L11 1"
                     stroke="currentColor"
@@ -171,55 +177,55 @@
               </span>
             </button>
 
-            <ul class="dropdown-menu" role="menu">
-              <li>
-                <a href="/question-de-voyance" title="Posez votre question de voyance">
-                  <i class="fa-solid fa-question menu-icon"></i>
+            <ul class="dropdown-menu" id="consultations-menu" role="menu" aria-label="Options de consultation">
+              <li role="none">
+                <a href="/question-de-voyance" role="menuitem" title="Posez votre question de voyance">
+                  <i class="fa-solid fa-question menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Question gratuite</span>
                     <span class="menu-description">Obtenez une première réponse sans frais</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/voyance-telephone" title="Consultation de voyance par téléphone">
-                  <i class="fa-solid fa-mobile-screen-button menu-icon"></i>
+              <li role="none">
+                <a href="/voyance-telephone" role="menuitem" title="Consultation de voyance par téléphone">
+                  <i class="fa-solid fa-mobile-screen-button menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Par téléphone</span>
                     <span class="menu-description">Consultation directe et sans attente</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/demande-rappel" title="Demandez à être rappelé par un voyant">
-                  <i class="fa-solid fa-phone-volume menu-icon"></i>
+              <li role="none">
+                <a href="/demande-rappel" role="menuitem" title="Demandez à être rappelé par un voyant">
+                  <i class="fa-solid fa-phone-volume menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Se faire rappeler</span>
                     <span class="menu-description">Un voyant vous recontacte immédiatement</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/voyance-par-tchat" title="Consultation de voyance par tchat">
-                  <i class="fa-solid fa-comments menu-icon"></i>
+              <li role="none">
+                <a href="/voyance-par-tchat" role="menuitem" title="Consultation de voyance par tchat">
+                  <i class="fa-solid fa-comments menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Par tchat</span>
                     <span class="menu-description">Échangez par messagerie instantanée</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/voyance-sans-cb" title="Voyance sans carte bancaire">
-                  <i class="fa-solid fa-credit-card menu-icon"></i>
+              <li role="none">
+                <a href="/voyance-sans-cb" role="menuitem" title="Voyance sans carte bancaire">
+                  <i class="fa-solid fa-credit-card menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Sans CB</span>
                     <span class="menu-description">Consultation par téléphone sans CB</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/voyance-par-sms" title="Consultation de voyance par SMS">
-                  <i class="fa-solid fa-sms menu-icon"></i>
+              <li role="none">
+                <a href="/voyance-par-sms" role="menuitem" title="Consultation de voyance par SMS">
+                  <i class="fa-solid fa-sms menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Par SMS</span>
                     <span class="menu-description">Réponses concises où que vous soyez</span>
@@ -230,19 +236,17 @@
           </li>
 
           <li class="dropdown">
-            <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <button
+              class="dropdown-toggle"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="arts-divinatoires-menu">
               <div class="main-menu-content">
                 <span class="main-menu-title">Arts divinatoires</span>
                 <span class="main-menu-description">Découvrez nos méthodes de prédiction</span>
               </div>
-              <span class="caret">
-                <svg
-                  width="12"
-                  height="8"
-                  viewBox="0 0 12 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true">
+              <span class="caret" aria-hidden="true">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1 1 L6 6 L11 1"
                     stroke="currentColor"
@@ -253,46 +257,50 @@
               </span>
             </button>
 
-            <ul class="dropdown-menu" role="menu">
-              <li>
-                <a href="/voyance" title="Consultation de voyance">
-                  <i class="fa-solid fa-eye menu-icon"></i>
+            <ul
+              class="dropdown-menu"
+              id="arts-divinatoires-menu"
+              role="menu"
+              aria-label="Arts divinatoires disponibles">
+              <li role="none">
+                <a href="/voyance" role="menuitem" title="Consultation de voyance">
+                  <i class="fa-solid fa-eye menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Voyance</span>
                     <span class="menu-description">Révélations sur votre passé, présent et futur</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/medium" title="Consultation avec un médium">
-                  <i class="fa-solid fa-hands-holding-child menu-icon"></i>
+              <li role="none">
+                <a href="/medium" role="menuitem" title="Consultation avec un médium">
+                  <i class="fa-solid fa-hands-holding-child menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Médiumnité</span>
                     <span class="menu-description">Contact avec les énergies spirituelles</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/tarot" title="Consultation par le tarot">
-                  <i class="fa-solid fa-rectangle-list menu-icon"></i>
+              <li role="none">
+                <a href="/tarot" role="menuitem" title="Consultation par le tarot">
+                  <i class="fa-solid fa-rectangle-list menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Tarologie</span>
                     <span class="menu-description">Divination par les arcanes du Tarot</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/numerologie" title="Consultation en numérologie">
-                  <i class="fa-solid fa-hashtag menu-icon"></i>
+              <li role="none">
+                <a href="/numerologie" role="menuitem" title="Consultation en numérologie">
+                  <i class="fa-solid fa-hashtag menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Numérologie</span>
                     <span class="menu-description">Découvrez l'influence des chiffres sur votre vie</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="/astrologie" title="Consultation avec un astrologue">
-                  <i class="fa-solid fa-star menu-icon"></i>
+              <li role="none">
+                <a href="/astrologie" role="menuitem" title="Consultation avec un astrologue">
+                  <i class="fa-solid fa-star menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Astrologie</span>
                     <span class="menu-description">Interprétation des positions astrales</span>
@@ -301,8 +309,13 @@
               </li>
             </ul>
           </li>
-          <li class="dropdown-phone-cta dropdown-phone-cta-mobile">
-            <a href="tel:+33423092423" class="dropdown-phone-cta" title="Appelez pour une consultation immédiate">
+
+          <li class="dropdown-phone-cta dropdown-phone-cta-mobile" role="none">
+            <a
+              href="tel:+33423092423"
+              class="dropdown-phone-cta"
+              title="Appelez pour une consultation immédiate"
+              aria-label="Appeler le 04 23 09 24 23">
               <svg
                 width="16"
                 height="16"
@@ -314,14 +327,18 @@
                   d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.06-.24 11.72 11.72 0 003.69.61 1 1 0 011 1V21a1 1 0 01-1 1 19.93 19.93 0 01-19.93-19.93A1 1 0 013 1h3.5a1 1 0 011 1 11.72 11.72 0 00.61 3.69 1 1 0 01-.24 1.06z"
                   fill="currentColor" />
               </svg>
-              Appelez-nous :
+              <span>Appelez-nous :</span>
               <span itemprop="telephone">04 23 09 24 23</span>
             </a>
           </li>
         </ul>
 
         <div class="navbar-actions">
-          <a class="cta-phone-header" href="tel:+33423092423" title="Appelez pour une consultation immédiate">
+          <a
+            class="cta-phone-header"
+            href="tel:+33423092423"
+            title="Appelez pour une consultation immédiate"
+            aria-label="Appeler le 04 23 09 24 23">
             <svg
               width="16"
               height="16"
@@ -336,23 +353,8 @@
             <span itemprop="telephone">04 23 09 24 23</span>
           </a>
         </div>
-
-        <button class="hamburger-menu" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
       </nav>
     </header>
-
     <main>
       <!-- Combined hero section -->
       <section class="hero" id="hero-section">
@@ -361,7 +363,7 @@
           <h2>Consultations sérieuses par téléphone</h2>
           <p>Recevez des prédictions sur votre vie amoureuse, sentimentale, professionnelle et personnelle.</p>
 
-          <form class="hero-form-cta" action="/question-de-voyance" method="post">
+          <form class="hero-form-cta" action="question.html" method="get">
             <label for="userQuestion" class="visually-hidden">Posez votre question de voyance</label>
             <div>
               <textarea
@@ -1784,9 +1786,7 @@
           </div>
         </div>
       </footer>
-      <article></article>
     </main>
-
     <!-- Add structured data for local business if applicable -->
     <script type="application/ld+json">
       {

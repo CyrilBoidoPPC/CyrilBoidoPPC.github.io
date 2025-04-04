@@ -1,0 +1,33 @@
+:root {
+  --background-color: #ffffff;
+  --badge-color: #f9f9f9;
+  --text-color: #333;
+  --main-color: #ff4081;
+  --secondary-color: #d0ff00;
+  --hoover-color: #de3162a2;
+  --hoover-background-color: #f6f6f6;
+  --button-text-color: #fff;
+  --box-shadow-settings: rgba(29, 29, 27, 0.06) 0px 3px 6px 0px;
+  --box-shadow-card: 0 8px 10px rgba(0, 0, 0, 0.12);
+  --box-shadow-card-hover: 0 12px 15px rgba(0, 0, 0, 0.15);
+  --btn-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --btn-transform-up: translateY(-3px);
+  --light-text-color: #777;
+  --spacer-color: #eaeaea;
+  --font-size-sm: 0.8rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.2;
+}
