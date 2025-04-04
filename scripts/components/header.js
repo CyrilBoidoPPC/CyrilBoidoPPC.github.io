@@ -79,13 +79,6 @@ export function initializeHeader() {
           toggle.closest(".dropdown").classList.remove("open");
         });
       }
-
-      // If opening the menu, trap focus within it
-      if (!isExpanded) {
-        // Optional: focus the first element in the mobile menu
-        const firstInteractive = navbarMenu.querySelector("button, a");
-        if (firstInteractive) setTimeout(() => firstInteractive.focus(), 100);
-      }
     });
 
     // Add keyboard support to hamburger menu
