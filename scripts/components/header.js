@@ -40,11 +40,6 @@ export function initializeHeader() {
           // Toggle dropdown
           event.preventDefault();
           toggle.click();
-
-          // If opening the dropdown, focus the first menu item
-          if (!isExpanded && firstMenuItem) {
-            setTimeout(() => firstMenuItem.focus(), 100);
-          }
           break;
 
         case "Escape":

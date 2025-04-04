@@ -14,6 +14,9 @@ export function initServiceAccordion(sectionId) {
       console.log("Button clicked, isExpanded:", isExpanded);
 
       if (isExpanded) {
+        // Get button position before collapsing
+        const buttonPosition = this.getBoundingClientRect().top;
+
         // Hide all cards beyond the first 2
         cards.forEach((card, index) => {
           if (index >= 2) {
@@ -22,13 +25,16 @@ export function initServiceAccordion(sectionId) {
         });
         this.innerHTML = 'Voir plus <i class="fa-solid fa-chevron-down"></i>';
 
-        // Store reference to button for setTimeout
-        const button = this;
+        // After layout is updated, scroll to maintain button position
+        window.requestAnimationFrame(() => {
+          const newButtonPosition = this.getBoundingClientRect().top;
+          const scrollAdjustment = newButtonPosition - buttonPosition;
 
-        // Scroll to the button when collapsing
-        setTimeout(() => {
-          button.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 100);
+          window.scrollBy({
+            top: scrollAdjustment,
+            behavior: "smooth",
+          });
+        });
       } else {
         // Show all remaining cards without scrolling
         cards.forEach((card, index) => {
@@ -60,14 +66,6 @@ export function initializeFAQ() {
 
       // Toggle active class
       answer.classList.toggle("active");
-
-      // Close other open questions
-      faqQuestions.forEach((otherQuestion) => {
-        if (otherQuestion !== question && otherQuestion.getAttribute("aria-expanded") === "true") {
-          otherQuestion.setAttribute("aria-expanded", "false");
-          otherQuestion.nextElementSibling.classList.remove("active");
-        }
-      });
     });
   });
 }
