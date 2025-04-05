@@ -547,23 +547,25 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.compact-cta-input-wrapper input {
+.compact-cta-input-wrapper textarea {
   width: 100%;
-  padding: 2rem;
+  resize: none;
+  padding: 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.95);
   font-size: var(--font-size-base);
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.compact-cta-input-wrapper input:focus {
+.compact-cta-input-wrapper textarea:focus {
   outline: none;
   border-color: white;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
 }
 
-.compact-cta-input-wrapper input::placeholder {
+.compact-cta-input-wrapper textarea::placeholder {
   color: var(--light-text-color);
   opacity: 0.8;
 }
@@ -644,6 +646,7 @@
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
 }
 
 .service-card {

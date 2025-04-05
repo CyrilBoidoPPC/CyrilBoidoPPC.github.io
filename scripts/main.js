@@ -1,6 +1,7 @@
 // Import all components
 import { initializeHeader } from "/scripts/components/header.js";
-import { initializeForms } from "/scripts/components/question.js";
+import { initializeForms } from "/scripts/components/forms.js";
+import { initializeQuestionHandling } from "/scripts/components/question.js";
 import { initializeCarousel } from "/scripts/components/carousel.js";
 import { initializeTestimonials } from "/scripts/components/testimonials.js";
 import { initServiceAccordion, initializeFAQ } from "/scripts/components/accordion.js";
@@ -14,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize forms
   initializeForms();
+
+  // Initialize question handling
+  initializeQuestionHandling();
 
   // Initialize testimonials slider
   initializeTestimonials();

@@ -366,7 +366,7 @@
           <h2>Consultations sérieuses par téléphone</h2>
           <p>Recevez des prédictions sur votre vie amoureuse, sentimentale, professionnelle et personnelle.</p>
 
-          <form class="hero-form-cta" action="/demande/details.html" method="get">
+          <form class="hero-form-cta" action="#" method="get">
             <label for="userQuestion" class="visually-hidden">Posez votre question de voyance</label>
             <div>
               <textarea
@@ -400,12 +400,15 @@
           </div>
         </div>
         <div class="hero-image-container">
-          <img
-            src="/assets/images/hero3.png"
-            alt="Consultation personnalisée avec un voyant professionnel pour prédictions sur l'amour et le travail"
-            width="600"
-            height="900"
-            fetchpriority="high" />
+          <picture>
+            <source srcset="/assets/images/herored2.png" media="(min-width: 1026px)" />
+            <img
+              src="/assets/images/hero3.png"
+              alt="Consultation personnalisée avec un voyant professionnel pour prédictions sur l'amour et le travail"
+              width="600"
+              height="900"
+              fetchpriority="high" />
+          </picture>
         </div>
       </section>
       <section class="testimonials-section" id="temoignages">
@@ -709,16 +712,17 @@
               <div class="compact-cta-content">
                 <h3 class="compact-cta-title">Que voulez-vous savoir aujourd'hui ?</h3>
 
-                <form class="compact-cta-form" action="/demande/details.html" method="get">
+                <form class="compact-cta-form" action="#" method="get">
+                  <label for="compactQuestion1" class="visually-hidden">Posez votre question de voyance</label>
                   <div class="compact-cta-input-wrapper">
-                    <input
-                      type="text"
-                      id="compactQuestion"
+                    <textarea
+                      id="compactQuestion1"
                       name="userQuestion"
                       placeholder="Posez votre question..."
                       aria-label="Votre question de voyance"
+                      rows="1"
                       maxlength="200"
-                      required />
+                      required></textarea>
                     <button type="button" class="clear-button compact" aria-label="Effacer le texte">
                       <i class="fa-solid fa-times"></i>
                     </button>
@@ -1496,16 +1500,17 @@
               <div class="compact-cta-content">
                 <h3 class="compact-cta-title">Que voulez-vous savoir aujourd'hui ?</h3>
 
-                <form class="compact-cta-form" action="/demande/details.html" method="get">
+                <form class="compact-cta-form" action="#" method="get">
+                  <label for="compactQuestion2" class="visually-hidden">Posez votre question de voyance</label>
                   <div class="compact-cta-input-wrapper">
-                    <input
-                      type="text"
-                      id="compactQuestion"
+                    <textarea
+                      id="compactQuestion2"
                       name="userQuestion"
                       placeholder="Posez votre question..."
                       aria-label="Votre question de voyance"
+                      rows="1"
                       maxlength="200"
-                      required />
+                      required></textarea>
                     <button type="button" class="clear-button compact" aria-label="Effacer le texte">
                       <i class="fa-solid fa-times"></i>
                     </button>
@@ -1595,203 +1600,201 @@
           ]
         }
       </script>
-      <footer class="site-footer" role="contentinfo">
-        <div class="footer-container">
-          <div class="footer-main">
-            <div class="footer-logo">
-              <a href="/" title="Accueil Clairvoyances" aria-label="Retour à l'accueil">
-                <img
-                  src="/assets/images/clairvoyances logo rectangle.png"
-                  alt="Logo Clairvoyances - Service de voyance et médiumnité"
-                  width="180"
-                  height="70"
-                  loading="lazy" />
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <a href="/" title="Accueil Clairvoyances" aria-label="Retour à l'accueil">
+              <img
+                src="/assets/images/clairvoyances logo rectangle.png"
+                alt="Logo Clairvoyances - Service de voyance et médiumnité"
+                width="180"
+                height="70"
+                loading="lazy" />
+            </a>
+            <p class="footer-slogan">Éclairez votre chemin avec nos experts</p>
+          </div>
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3 class="footer-heading" id="footer-consultations-heading">Consultations</h3>
+              <ul class="footer-links" aria-labelledby="footer-consultations-heading">
+                <li>
+                  <a href="/consultation/question-voyance-gratuite.html" title="Posez votre question de voyance">
+                    Question gratuite
+                  </a>
+                </li>
+                <li>
+                  <a href="/consultation/voyance-par-telephone.html" title="Consultation de voyance par téléphone">
+                    Par téléphone
+                  </a>
+                </li>
+                <li>
+                  <a href="/consultation/se-faire-rappeler.html" title="Demandez à être rappelé par un voyant">
+                    Se faire rappeler
+                  </a>
+                </li>
+                <li>
+                  <a href="/consultation/voyance-par-tchat.html" title="Consultation de voyance par tchat">Par tchat</a>
+                </li>
+                <li><a href="/consultation/voyance-sans-cb.html" title="Voyance sans carte bancaire">Sans CB</a></li>
+                <li>
+                  <a href="/consultation/voyance-par-sms.html" title="Consultation de voyance par SMS">Par SMS</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-heading" id="footer-arts-heading">Arts Divinatoires</h3>
+              <ul class="footer-links" aria-labelledby="footer-arts-heading">
+                <li><a href="/divination/voyance.html" title="Consultation de voyance">Voyance</a></li>
+                <li><a href="/divination/mediumnite.html" title="Consultation avec un médium">Médiumnité</a></li>
+                <li><a href="/divination/tarologie.html" title="Consultation par le tarot">Tarologie</a></li>
+                <li><a href="/divination/numerologie.html" title="Consultation en numérologie">Numérologie</a></li>
+                <li><a href="/divination/astrologie.html" title="Consultation avec un astrologue">Astrologie</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3 class="footer-heading" id="footer-infos-heading">Infos</h3>
+              <ul class="footer-links" aria-labelledby="footer-infos-heading">
+                <li><a href="/" title="Accueil">Accueil</a></li>
+                <li><a href="/legal/cgvu.html" title="Conditions générales de vente et d'utilisation">CGVU</a></li>
+                <li><a href="/legal/partenaires.html" title="Nos partenaires">Partenaires</a></li>
+                <li><a href="/legal/mentions-legales.html" title="Mentions Légales">Mentions Légales</a></li>
+                <li>
+                  <a href="/legal/confidentialite.html" title="Politique de Confidentialité">
+                    Politique de Confidentialité
+                  </a>
+                </li>
+                <li>
+                  <a href="/legal/donnees-personnelles.html" title="Vos Données Personnelles">
+                    Vos Données Personnelles
+                  </a>
+                </li>
+                <li>
+                  <a href="/legal/protection-donnees.html" title="Charte sur la Protection des Données">
+                    Charte sur la Protection des Données
+                  </a>
+                </li>
+                <li><a href="/contact.html" title="Contactez-nous">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <div class="contact-info">
+            <div class="contact-phone">
+              <h3 id="footer-call-heading">Appelez-nous</h3>
+              <a href="tel:+33423092423" class="phone-number" aria-labelledby="footer-call-heading">
+                <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                <span>04 23 09 24 23</span>
               </a>
-              <p class="footer-slogan">Éclairez votre chemin avec nos experts</p>
+              <p class="availability">Disponible 7j/7 de 8h à 2h</p>
             </div>
-            <div class="footer-columns">
-              <div class="footer-column">
-                <h3 class="footer-heading" id="footer-consultations-heading">Consultations</h3>
-                <ul class="footer-links" aria-labelledby="footer-consultations-heading">
-                  <li>
-                    <a href="/consultation/question-voyance-gratuite.html" title="Posez votre question de voyance">
-                      Question gratuite
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/consultation/voyance-par-telephone.html" title="Consultation de voyance par téléphone">
-                      Par téléphone
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/consultation/se-faire-rappeler.html" title="Demandez à être rappelé par un voyant">
-                      Se faire rappeler
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/consultation/voyance-par-tchat.html" title="Consultation de voyance par tchat">
-                      Par tchat
-                    </a>
-                  </li>
-                  <li><a href="/consultation/voyance-sans-cb.html" title="Voyance sans carte bancaire">Sans CB</a></li>
-                  <li>
-                    <a href="/consultation/voyance-par-sms.htmls" title="Consultation de voyance par SMS">Par SMS</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <h3 class="footer-heading" id="footer-arts-heading">Arts Divinatoires</h3>
-                <ul class="footer-links" aria-labelledby="footer-arts-heading">
-                  <li><a href="/divination/voyance.html" title="Consultation de voyance">Voyance</a></li>
-                  <li><a href="/divination/mediumnite.html" title="Consultation avec un médium">Médiumnité</a></li>
-                  <li><a href="/divination/tarologie.html" title="Consultation par le tarot">Tarologie</a></li>
-                  <li><a href="/divination/numerologie.html" title="Consultation en numérologie">Numérologie</a></li>
-                  <li><a href="/divination/astrologie.html" title="Consultation avec un astrologue">Astrologie</a></li>
-                </ul>
-              </div>
-              <div class="footer-column">
-                <h3 class="footer-heading" id="footer-infos-heading">Infos</h3>
-                <ul class="footer-links" aria-labelledby="footer-infos-heading">
-                  <li><a href="/" title="Accueil">Accueil</a></li>
-                  <li><a href="/legal/cgvu.html" title="Conditions générales de vente et d'utilisation">CGVU</a></li>
-                  <li><a href="/legal/partenaires.html" title="Nos partenaires">Partenaires</a></li>
-                  <li><a href="/legal/mentions-legales.html" title="Mentions Légales">Mentions Légales</a></li>
-                  <li>
-                    <a href="/legal/confidentialite.html" title="Politique de Confidentialité">
-                      Politique de Confidentialité
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/legal/donnees-personnelles.html" title="Vos Données Personnelles">
-                      Vos Données Personnelles
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/legal/protection-donnees.html" title="Charte sur la Protection des Données">
-                      Charte sur la Protection des Données
-                    </a>
-                  </li>
-                  <li><a href="/contact.html" title="Contactez-nous">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-contact">
-            <div class="contact-info">
-              <div class="contact-phone">
-                <h3 id="footer-call-heading">Appelez-nous</h3>
-                <a href="tel:+33423092423" class="phone-number" aria-labelledby="footer-call-heading">
-                  <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
-                  <span>04 23 09 24 23</span>
+            <div class="social-media">
+              <h3 id="footer-social-heading">Suivez-nous</h3>
+              <div class="social-icons" aria-labelledby="footer-social-heading">
+                <a
+                  href="https://www.facebook.com/clairvoyances"
+                  title="Facebook Clairvoyances"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Suivez-nous sur Facebook">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                 </a>
-                <p class="availability">Disponible 7j/7 de 8h à 2h</p>
-              </div>
-              <div class="social-media">
-                <h3 id="footer-social-heading">Suivez-nous</h3>
-                <div class="social-icons" aria-labelledby="footer-social-heading">
-                  <a
-                    href="https://www.facebook.com/clairvoyances"
-                    title="Facebook Clairvoyances"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Suivez-nous sur Facebook">
-                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/clairvoyances"
-                    title="Instagram Clairvoyances"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Suivez-nous sur Instagram">
-                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                  </a>
-                  <a
-                    href="https://twitter.com/clairvoyances"
-                    title="Twitter Clairvoyances"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Suivez-nous sur Twitter">
-                    <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/clairvoyances"
-                    title="YouTube Clairvoyances"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Regardez nos vidéos sur YouTube">
-                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                  </a>
-                </div>
+                <a
+                  href="https://www.instagram.com/clairvoyances"
+                  title="Instagram Clairvoyances"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Suivez-nous sur Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://twitter.com/clairvoyances"
+                  title="Twitter Clairvoyances"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Suivez-nous sur Twitter">
+                  <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/clairvoyances"
+                  title="YouTube Clairvoyances"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Regardez nos vidéos sur YouTube">
+                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
-          <div class="footer-newsletter" aria-labelledby="newsletter-title">
-            <div class="newsletter-content">
-              <h3 class="newsletter-title" id="newsletter-title">Recevez nos actualités et conseils</h3>
-              <p class="newsletter-text">
-                Abonnez-vous à notre newsletter pour recevoir des conseils personnalisés et nos offres spéciales
-              </p>
-              <form class="newsletter-form" action="#" aria-labelledby="newsletter-title">
-                <div class="form-group">
-                  <label for="footer-email" class="visually-hidden">Votre adresse email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="footer-email"
-                    placeholder="Votre adresse email"
-                    required
-                    aria-required="true" />
-                  <button type="submit" class="newsletter-button">
-                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                    S'abonner
-                  </button>
-                </div>
-                <div class="form-checkbox">
-                  <input type="checkbox" id="newsletter-consent" name="consent" required aria-required="true" />
-                  <label for="newsletter-consent">J'accepte de recevoir les communications de Clairvoyances</label>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="footer-legal">
-            <div class="legal-content">
-              <p class="legal-text">
-                Service réservé aux personnes majeures & ayant la capacité juridique de contracter.
-                <br />
-                <br />
-                * L'accès à cette offre commerciale est soumis aux conditions suivantes : 10 minutes de voyance privée
-                offertes. Offre valable dans la limite des 10 premières minutes, après validation de votre compte client
-                comprenant votre nom, prénom, téléphone, adresse, email et carte de paiement valide. Au-delà des 10
-                premières minutes, le tarif est de 3.5EUR à 9.5EUR TTC la minute supplémentaire selon le voyant. Offre
-                limitée à la première voyance par compte client.
-                <br />
-                <br />
-                ** L'accès à cette offre commerciale est soumis aux conditions suivantes : 10 minutes de voyance au
-                tarif spécial de 15EUR TTC, voyance privée. Offre valable dans la limite des 10 premières minutes, après
-                validation de votre compte client comprenant votre nom, prénom, téléphone, adresse, email et carte de
-                paiement valide (compte client nouveau ou existant). Au-delà des 10 premières minutes, le tarif est de
-                3.5EUR à 9.5EUR TTC la minute supplémentaire selon le voyant.
-                <br />
-                <br />
-                Par respect pour la vie privée de nos voyants, nos voyants présents sur ce site sont fictifs.
-              </p>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <p>
-              &copy;
-              <time datetime="2025">2025</time>
-              Clairvoyances - Tous droits réservés
+        </div>
+        <div class="footer-newsletter" aria-labelledby="newsletter-title">
+          <div class="newsletter-content">
+            <h3 class="newsletter-title" id="newsletter-title">Recevez nos actualités et conseils</h3>
+            <p class="newsletter-text">
+              Abonnez-vous à notre newsletter pour recevoir des conseils personnalisés et nos offres spéciales
             </p>
-            <p class="design-credit">
-              Conçu avec
-              <i class="fa-solid fa-heart" aria-hidden="true"></i>
-              à Nice, France
+            <form class="newsletter-form" action="#" aria-labelledby="newsletter-title">
+              <div class="form-group">
+                <label for="footer-email" class="visually-hidden">Votre adresse email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="footer-email"
+                  placeholder="Votre adresse email"
+                  required
+                  aria-required="true" />
+                <button type="submit" class="newsletter-button">
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  S'abonner
+                </button>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" id="newsletter-consent" name="consent" required aria-required="true" />
+                <label for="newsletter-consent">J'accepte de recevoir les communications de Clairvoyances</label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <div class="legal-content">
+            <p class="legal-text">
+              Service réservé aux personnes majeures & ayant la capacité juridique de contracter.
+              <br />
+              <br />
+              * L'accès à cette offre commerciale est soumis aux conditions suivantes : 10 minutes de voyance privée
+              offertes. Offre valable dans la limite des 10 premières minutes, après validation de votre compte client
+              comprenant votre nom, prénom, téléphone, adresse, email et carte de paiement valide. Au-delà des 10
+              premières minutes, le tarif est de 3.5EUR à 9.5EUR TTC la minute supplémentaire selon le voyant. Offre
+              limitée à la première voyance par compte client.
+              <br />
+              <br />
+              ** L'accès à cette offre commerciale est soumis aux conditions suivantes : 10 minutes de voyance au tarif
+              spécial de 15EUR TTC, voyance privée. Offre valable dans la limite des 10 premières minutes, après
+              validation de votre compte client comprenant votre nom, prénom, téléphone, adresse, email et carte de
+              paiement valide (compte client nouveau ou existant). Au-delà des 10 premières minutes, le tarif est de
+              3.5EUR à 9.5EUR TTC la minute supplémentaire selon le voyant.
+              <br />
+              <br />
+              Par respect pour la vie privée de nos voyants, nos voyants présents sur ce site sont fictifs.
             </p>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footer-copyright">
+          <p>
+            &copy;
+            <time datetime="2025">2025</time>
+            Clairvoyances - Tous droits réservés
+          </p>
+          <p class="design-credit">
+            Conçu avec
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            à Nice, France
+          </p>
+        </div>
+      </div>
+    </footer>
     <!-- Add structured data for local business if applicable -->
     <script type="application/ld+json">
       {

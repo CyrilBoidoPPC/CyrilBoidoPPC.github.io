@@ -1,88 +1,45 @@
-// Form elements functionality
-export function initializeForms() {
-  const textarea = document.getElementById("userQuestion");
-  const charCount = document.getElementById("charCount");
-  const clearButton = document.querySelector(".clear-button");
-  const compactInput = document.getElementById("compactQuestion");
-  const compactClearButton = document.querySelector(".clear-button.compact");
+// Initialize all question forms to save data and redirect
+export function initializeQuestionHandling() {
+  // Get all forms that should be handled by this module
+  const mainForm = document.querySelector(".hero-form-cta");
+  const compactForms = document.querySelectorAll(".compact-cta-form");
 
-  // Textarea functionality
-  if (textarea && charCount) {
-    // Set initial height and count
-    setTimeout(function () {
-      textarea.style.height = "auto";
-      textarea.style.height = textarea.scrollHeight + "px";
-      charCount.textContent = textarea.value.length;
-    }, 0);
-
-    // Update height and count on input
-    textarea.addEventListener("input", function () {
-      // Auto-resize
-      this.style.height = "auto";
-      this.style.height = this.scrollHeight + "px";
-
-      // Update character count
-      charCount.textContent = this.value.length;
-
-      // Change color when approaching limit
-      if (this.value.length > 180) {
-        charCount.style.color = "#DE3163";
-        charCount.style.fontWeight = "bold";
-        charCount.style.fontSize = "1rem";
-      } else {
-        charCount.style.color = "#777";
-        charCount.style.fontWeight = "normal";
-        charCount.style.fontSize = "0.8rem";
-      }
-
-      toggleClearButton();
-    });
+  // Initialize the main form if it exists
+  if (mainForm) {
+    mainForm.addEventListener("submit", handleFormSubmit);
   }
 
-  // Clear button functionality for main form
-  function toggleClearButton() {
-    if (textarea && textarea.value.length > 0) {
-      clearButton.classList.add("visible");
-    } else if (textarea) {
-      clearButton.classList.remove("visible");
-    }
-  }
-
-  if (clearButton) {
-    clearButton.addEventListener("click", () => {
-      if (textarea) {
-        textarea.value = "";
-        if (charCount) charCount.textContent = "0";
-        toggleClearButton();
-        textarea.focus();
-        textarea.style.height = "auto";
-        textarea.style.height = textarea.scrollHeight + "px";
-      }
+  // Initialize all compact forms
+  if (compactForms.length > 0) {
+    compactForms.forEach((form) => {
+      form.addEventListener("submit", handleFormSubmit);
     });
   }
+}
 
-  // Initial visibility check
-  if (textarea) toggleClearButton();
+// Handle the form submission
+function handleFormSubmit(event) {
+  event.preventDefault();
 
-  // Compact form clear button functionality
-  if (compactInput && compactClearButton) {
-    compactInput.addEventListener("input", function () {
-      if (this.value.length > 0) {
-        compactClearButton.classList.add("visible");
-      } else {
-        compactClearButton.classList.remove("visible");
-      }
-    });
-
-    compactClearButton.addEventListener("click", () => {
-      compactInput.value = "";
-      compactClearButton.classList.remove("visible");
-      compactInput.focus();
-    });
-
-    // Check initial state
-    if (compactInput.value.length > 0) {
-      compactClearButton.classList.add("visible");
-    }
+  // Get the question from the form
+  let questionValue = "";
+  if (event.target.classList.contains("hero-form-cta")) {
+    // Main form with textarea
+    questionValue = event.target.querySelector('textarea[name="userQuestion"]').value;
+  } else {
+    // Compact form with input
+    questionValue = event.target.querySelector('textarea[name="userQuestion"]').value;
   }
+
+  // Validate question
+  if (!questionValue || questionValue.trim().length < 3) {
+    alert("Veuillez poser une question plus détaillée.");
+    return;
+  }
+
+  // Store the question in sessionStorage (or localStorage for persistence)
+  sessionStorage.setItem("userQuestion", questionValue);
+
+  // Redirect to the details page
+  window.location.href = "/demande/details.html";
 }
