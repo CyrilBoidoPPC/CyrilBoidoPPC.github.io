@@ -6,6 +6,7 @@ export default defineConfig({
   root: "./",
   build: {
     outDir: "dist",
+    assetsInlineLimit: 0,
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
@@ -37,6 +38,7 @@ export default defineConfig({
       },
     },
   },
+  publicDir: "assets",
   plugins: [
     htmlPurge({
       content: ["./**/*.html", "./scripts/**/*.js"],

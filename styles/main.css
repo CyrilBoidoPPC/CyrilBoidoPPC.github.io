@@ -1,8 +1,10 @@
-@import "base/variables.css";
-@import "base/reset.css";
+@import "/styles/base/variables.css";
+@import "/styles/base/resets-fonts.css";
 
-@import "components/header.css";
-@import "components/footer.css";
+@import "/styles/components/header.css";
+@import "/styles/components/footer.css";
+
+@import "/styles/base/fontawesome.css";
 
 /* START OF THE HERO SECTION */
 
@@ -169,7 +171,8 @@
 
 .badges-container.compact {
   width: 100%;
-  margin-top: -1rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .trust-badge {
@@ -201,10 +204,8 @@
 }
 
 /* Testimonials Section */
-/* Testimonials Section - Updated Styles */
 
 .testimonials-section {
-  padding: var(--spacing-lg) 0;
   overflow: hidden; /* Prevent horizontal scrollbar */
 }
 
@@ -405,7 +406,6 @@
 
 /* How It Works Section Redesign */
 .how-it-works-section {
-  padding: var(--spacing-lg) 0;
   background-color: var(--background-color);
   position: relative;
   overflow: hidden;
@@ -439,11 +439,6 @@
   height: 6px;
   background: var(--main-color);
   border-radius: 3px 3px 0 0;
-}
-
-.steps-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--box-shadow-card-hover);
 }
 
 .steps-content {
@@ -515,7 +510,6 @@
 
 /* Compact CTA Component Styles */
 .compact-cta-wrapper {
-  margin: var(--spacing-lg) auto;
   max-width: 1000px;
   position: relative;
 }
@@ -526,7 +520,7 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   background: linear-gradient(135deg, var(--main-color) 0%, #ff6b8b 100%);
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 8px;
 }
 
 .compact-cta-content {
@@ -641,7 +635,6 @@
 
 /* Services Grid Section Styles */
 .services-section {
-  padding: var(--spacing-xl) 0;
   background-color: var(--background-color);
   overflow: hidden;
 }
@@ -723,14 +716,6 @@
   border-radius: 4px;
 }
 
-.benefit-badge i {
-  color: var(--main-color);
-  font-size: 0.9rem;
-  width: 18px;
-  display: flex;
-  justify-content: center;
-}
-
 .benefit-badge span {
   font-size: 0.85rem;
   color: var(--text-color);
@@ -741,22 +726,23 @@
   display: inline-flex;
   align-items: center;
   color: var(--main-color);
-  text-decoration: underline;
-  text-underline-offset: 5px;
+  text-decoration: none;
   font-weight: var(--font-weight-medium);
   padding: 0.5rem 0;
   margin-top: auto;
   transition: all 0.25s ease-in-out;
 }
 
-.service-link svg {
+.service-link span {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.service-link i {
   margin-left: 0.5rem;
-  transition: transform 0.25s ease-in-out;
 }
 
 .service-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
   color: var(--hoover-color);
   transform: translateY(-2px);
 }
@@ -775,9 +761,8 @@
   font-weight: var(--font-weight-medium);
 }
 
-.service-badge svg {
+.service-badge i {
   margin-right: 4px;
-  font-size: 0.8rem;
 }
 
 .services-accordion-container {
@@ -800,7 +785,7 @@
   align-items: center;
 }
 
-.services-show-more svg {
+.services-show-more i {
   margin-left: 0.5rem;
   transition: transform 0.3s ease;
 }
@@ -831,8 +816,6 @@
 
 /* Main container refinements */
 .faq-container {
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -883,8 +866,6 @@
 
 .faq-question[aria-expanded="true"] i {
   transform: rotate(180deg);
-  background-color: var(--main-color);
-  color: white;
 }
 
 /* Active state for question */
@@ -926,14 +907,59 @@
   opacity: 0.9;
   position: relative;
 }
+.faq-answer ul {
+  margin: 0 var(--spacing-lg) var(--spacing-md);
+  padding-left: var(--spacing-lg);
+  list-style-position: outside;
+}
 
-/* Style list markers */
+.faq-answer ol {
+  margin: 0 var(--spacing-lg) var(--spacing-md);
+  padding-left: var(--spacing-lg);
+  list-style-position: outside;
+}
 
-/* SEO Content Styles */
+/* Styling for unordered list bullets */
+.faq-answer ul li {
+  position: relative;
+  padding-left: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  list-style-type: none;
+}
+
+.faq-answer ul li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: var(--main-color);
+  font-size: 1.2em;
+}
+
+/* Styling for ordered list numbers */
+.faq-answer ol {
+  counter-reset: faq-counter;
+}
+
+.faq-answer ol li {
+  position: relative;
+  padding-left: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  list-style-type: none;
+}
+
+.faq-answer ol li::before {
+  counter-increment: faq-counter;
+  content: counter(faq-counter) ".";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--main-color);
+  font-weight: var(--font-weight-medium);
+}
+/* Info Content Styles */
 .info-content {
   padding: var(--spacing-xl) 0;
-  margin-top: var(--spacing-xl);
   position: relative;
+  margin-bottom: 2rem;
   background-color: var(--background-color);
   border-radius: 12px;
   box-shadow: var(--box-shadow-card);
@@ -1547,6 +1573,21 @@
 
   .faq-item:hover {
     transform: translateY(-3px);
+  }
+}
+
+@media (min-width: 768px) {
+  .faq-answer ul,
+  .faq-answer ol {
+    padding-left: var(--spacing-xl);
+  }
+
+  .faq-answer ul li::before {
+    left: -1.2rem;
+  }
+
+  .faq-answer ol li::before {
+    left: -1.8rem;
   }
 }
 

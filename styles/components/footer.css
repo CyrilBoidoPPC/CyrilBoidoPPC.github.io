@@ -2,7 +2,6 @@
   background-color: #f6f6f6;
   color: var(--text-color);
   padding-top: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
   border-top: 5px solid var(--main-color);
   font-size: var(--font-size-sm);
 }

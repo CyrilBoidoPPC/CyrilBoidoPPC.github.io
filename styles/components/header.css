@@ -65,8 +65,9 @@
 }
 
 .dropdown-toggle:hover {
-  color: var(--hoover-color);
-  outline: none;
+  background-color: var(--hoover-background-color);
+  border-radius: 8px;
+  cursor: pointer;
 }
 .main-menu-content {
   display: flex;

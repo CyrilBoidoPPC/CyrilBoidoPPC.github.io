@@ -1,10 +1,11 @@
 // Import all components
-import { initializeHeader } from "./components/header.js";
-import { initializeForms } from "./components/forms.js";
-import { initializeCarousel } from "./components/carousel.js";
-import { initializeTestimonials } from "./components/testimonials.js";
-import { initServiceAccordion, initializeFAQ } from "./components/accordion.js";
-import { initializeAnimations } from "./utils/animations.js";
+import { initializeHeader } from "/scripts/components/header.js";
+import { initializeForms } from "/scripts/components/question.js";
+import { initializeCarousel } from "/scripts/components/carousel.js";
+import { initializeTestimonials } from "/scripts/components/testimonials.js";
+import { initServiceAccordion, initializeFAQ } from "/scripts/components/accordion.js";
+import { initializeAnimations } from "/scripts/utils/animations.js";
+import { initializeNewsletter } from "/scripts/components/newsletter.js";
 
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,4 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize animations
   initializeAnimations();
+
+  // Initialize newsletter form
+  initializeNewsletter();
 });

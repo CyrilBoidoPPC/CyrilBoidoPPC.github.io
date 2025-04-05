@@ -4,7 +4,7 @@
   --text-color: #333;
   --main-color: #de1795;
   --secondary-color: #d0ff00;
-  --hoover-color: #de3162a2;
+  --hoover-color: #de179583;
   --hoover-background-color: #f6f6f6;
   --button-text-color: #fff;
   --box-shadow-settings: rgba(29, 29, 27, 0.06) 0px 3px 6px 0px;
@@ -27,7 +27,7 @@
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
-  --spacing-xxl: 2.5rem;
+  --spacing-xxl: 4rem;
   --line-height-normal: 1.5;
   --line-height-tight: 1.2;
 }

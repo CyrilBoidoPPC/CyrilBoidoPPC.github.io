@@ -42,7 +42,7 @@ export function initServiceAccordion(sectionId) {
             card.classList.add("show");
           }
         });
-        this.innerHTML = 'Voir moins <i class="fa-solid fa-chevron-up"></i>';
+        this.innerHTML = 'Voir moins <i class="fa-solid fa-chevron-down"></i>';
         // No scroll behavior here - maintain current position
       }
 
