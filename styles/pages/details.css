@@ -6,6 +6,8 @@
 
 @import "/styles/base/fontawesome.css";
 
+@import "/styles/components/form-error.css";
+
 .details-container {
   width: 90%;
   max-width: 800px;
@@ -66,7 +68,7 @@
 
 /* Heading styles */
 .details-container h1 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
   text-align: center;
   margin-bottom: 1rem;
@@ -79,7 +81,7 @@
 }
 
 /* Form styles */
-.contact-form {
+.lead-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -88,7 +90,6 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .form-group label {
@@ -100,7 +101,8 @@
 .form-hint {
   font-size: 0.8rem;
   color: var(--light-text-color);
-  margin-top: 0.25rem;
+  margin-top: -0.3rem;
+  margin-left: 0.3rem;
 }
 
 .form-group input[type="text"],
@@ -114,45 +116,280 @@
   background-color: #f9f9f9;
 }
 
-/* Phone input styles */
+/* Phone input container */
 .phone-input-container {
   display: flex;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden;
   background-color: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
+.phone-input-container:focus-within {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(222, 23, 149, 0.1);
+}
+
+/* Country code dropdown */
 .country-code-dropdown {
   position: relative;
+  min-width: 95px;
 }
 
+/* Country selector button */
 .country-code-selector {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
   height: 100%;
+  padding: 0.75rem;
   border: none;
   background: none;
   cursor: pointer;
-  font-size: var(--font-size-base);
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: background-color 0.2s ease;
 }
 
+.country-code-selector:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.country-code-selector:focus {
+  outline: none;
+}
+
+/* Flag image */
 .country-flag {
   width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  margin-right: 0.5rem;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  margin-right: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Selected country code text */
 #selectedCountryCode {
-  margin-right: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50px;
+  margin-right: 0.25rem;
+  font-weight: 500;
 }
 
+/* Dropdown caret icon */
+.country-code-selector i {
+  font-size: 0.8rem;
+  margin-left: auto;
+  color: var(--light-text-color);
+  transition: transform 0.2s ease;
+}
+
+/* Telephone input */
 .phone-input-container input[type="tel"] {
   flex: 1;
+  padding: 0.75rem;
   border: none;
   border-left: 1px solid #e0e0e0;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease;
+}
+
+.phone-input-container input[type="tel"]:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+/* Dropdown content */
+.country-code-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  width: 260px;
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  margin-top: 5px;
+}
+
+/* Scrollbar styling for dropdown */
+.country-code-dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.country-code-dropdown-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.country-code-dropdown-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.country-code-dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* Search input area */
+.country-search {
+  position: sticky;
+  top: 0;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  z-index: 2;
+}
+
+.country-search input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+}
+
+.country-search input:focus {
+  outline: none;
+  border-color: var(--main-color);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(222, 23, 149, 0.05);
+}
+
+/* List of countries */
+.country-list {
+  padding: 0.25rem 0;
+}
+
+/* Country item */
+.country-item {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.country-item:hover,
+.country-item:focus {
+  background-color: rgba(222, 23, 149, 0.05);
+}
+
+.country-item:active {
+  background-color: rgba(222, 23, 149, 0.1);
+}
+
+/* Country name */
+.country-name {
+  flex: 1;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Country code */
+.country-code {
+  color: var(--light-text-color);
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .country-code-dropdown-content {
+    width: 300px;
+    max-height: 320px;
+  }
+
+  #selectedCountryCode {
+    max-width: 80px;
+  }
+
+  .country-code-selector {
+    padding: 0.8rem 1rem;
+  }
+
+  .phone-input-container input[type="tel"] {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Animation for dropdown opening */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.country-code-dropdown-content.open {
+  display: block;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Style for when dropdown is open */
+.country-code-selector.active i {
+  transform: rotate(180deg);
+}
+
+/* Focus styles for keyboard accessibility */
+.country-item:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: -2px;
+}
+
+/* For Firefox - special scrollbar styling */
+@supports (scrollbar-width: thin) {
+  .country-code-dropdown-content {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f1f1f1;
+  }
+}
+
+/* No results message */
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Phone input validation styling */
+.phone-input-container input[type="tel"]:valid {
+  background-color: rgba(240, 255, 240, 0.5);
+}
+
+.phone-input-container input[type="tel"]:invalid:not(:placeholder-shown) {
+  background-color: rgba(255, 240, 240, 0.5);
+}
+
+/* Add a little indicator to show the dropdown is interactive */
+.country-code-selector::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 60%;
+  width: 1px;
+  background-color: #e0e0e0;
+  top: 20%;
 }
 
 /* Checkbox styles */
@@ -205,25 +442,40 @@
 
 /* Terms text */
 .form-terms {
-  text-align: center;
   margin-top: 1.5rem;
-  font-size: 0.8rem;
+}
+
+.form-terms p {
+  width: 80%;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  font-size: 0.7rem;
   color: var(--light-text-color);
 }
 
 .form-terms a {
   color: var(--main-color);
+  font-size: 0.7rem;
   margin: 0;
   text-decoration: underline;
   display: inline;
 }
 
-/* Badge styles */
-.badges-container.compact {
+.badges-container {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--badge-color);
+}
+
+.badges-container.compact {
+  width: 100%;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
 }
 
 .trust-badge {
@@ -233,7 +485,13 @@
 }
 
 .trust-badge i {
-  color: var(--main-color);
+  color: hsl(0, 0%, 0%);
+}
+
+.badge-text {
+  color: var(--light-text-color);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
 }
 
 /* Testimonial badges styles */
@@ -313,6 +571,10 @@
 
 .country-code {
   color: var(--light-text-color);
+}
+
+.form-group:nth-child(8) {
+  margin-top: 15rem; /* Reduced spacing after the second form group (Date de naissance) */
 }
 
 /* Media queries for responsiveness */

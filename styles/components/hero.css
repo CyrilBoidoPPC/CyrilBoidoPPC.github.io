@@ -163,6 +163,12 @@
   margin-bottom: 0 !important;
 }
 
+.badge-text {
+  color: var(--light-text-color);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+}
+
 .trust-badge {
   display: flex;
   align-items: center;
@@ -183,12 +189,6 @@
   max-width: 100%;
   border-radius: 12px;
   box-shadow: var(--box-shadow-card);
-}
-
-.badge-text {
-  color: var(--light-text-color);
-  font-size: 0.7rem;
-  font-weight: var(--font-weight-medium);
 }
 
 @media (min-width: 1200px) {

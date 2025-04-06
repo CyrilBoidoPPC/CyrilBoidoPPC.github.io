@@ -240,7 +240,7 @@
             <div class="step-icon">
               <i class="fa-solid fa-check"></i>
             </div>
-            <span class="step-text">Posez une question</span>
+            <span class="step-text">Votre question</span>
           </div>
           <div class="progress-line"></div>
 
@@ -254,16 +254,16 @@
 
           <div class="progress-step next">
             <div class="step-icon"></div>
-            <span class="step-text">Trouvez des réponses</span>
+            <span class="step-text">Vos réponses</span>
           </div>
         </div>
 
         <!-- Section du formulaire -->
-        <section class="contact-form-section">
-          <h1 class="section-title">Comment vous contacter pour vos réponses?</h1>
-          <p class="section-subtitle">Afin que notre voyant puisse vous recontacter</p>
+        <section class="lead-form-section">
+          <h1 class="section-title">Un [voyant] à bien recu votre question</h1>
+          <p class="section-subtitle">Comment peut-il vous donner les reponses ?</p>
 
-          <form id="leadForm" class="contact-form">
+          <form id="leadForm" class="lead-form">
             <div class="form-group">
               <label for="firstName">Prénom</label>
               <input type="text" id="firstName" name="firstName" placeholder="Jean" required />
@@ -314,10 +314,25 @@
                         <span class="country-name">Luxembourg</span>
                         <span class="country-code">+352</span>
                       </div>
+                      <div class="country-item" data-code="+377" data-country="MC">
+                        <img src="/assets/images/flags/mc.svg" alt="Monaco" class="country-flag" />
+                        <span class="country-name">Monaco</span>
+                        <span class="country-code">+377</span>
+                      </div>
                       <div class="country-item" data-code="+1" data-country="CA">
                         <img src="/assets/images/flags/ca.svg" alt="Canada" class="country-flag" />
                         <span class="country-name">Canada</span>
                         <span class="country-code">+1</span>
+                      </div>
+                      <div class="country-item" data-code="+590" data-country="GP">
+                        <img src="/assets/images/flags/gp.svg" alt="Guadeloupe" class="country-flag" />
+                        <span class="country-name">Guadeloupe</span>
+                        <span class="country-code">+590</span>
+                      </div>
+                      <div class="country-item" data-code="+596" data-country="MQ">
+                        <img src="/assets/images/flags/mq.svg" alt="Martinique" class="country-flag" />
+                        <span class="country-name">Martinique</span>
+                        <span class="country-code">+596</span>
                       </div>
                       <!-- D'autres pays peuvent être ajoutés ici -->
                     </div>
@@ -342,8 +357,8 @@
 
             <div class="form-group consent-group">
               <div class="checkbox-container">
-                <input type="checkbox" id="contactConsent" name="contactConsent" />
-                <label for="contactConsent">
+                <input type="checkbox" id="leadConsent" name="leadConsent" />
+                <label for="leadConsent">
                   En cochant j'accepte d'être recontacté par un voyant. J'accepte de recevoir des messages texte
                   automatisés promotionnels et personnalisés de la part de Clairvoyances au numéro de téléphone fourni.
                 </label>
@@ -353,46 +368,34 @@
             <div class="form-actions">
               <button type="submit" class="btn-primary">Confirmer ma consultation</button>
             </div>
-
-            <div class="badges-container compact">
-              <div class="trust-badge">
-                <i class="fa-solid fa-star"></i>
-                <span class="badge-text">4.8/5 - 20,000+ avis</span>
-              </div>
-              <div class="trust-badge">
-                <i class="fa-solid fa-lock"></i>
-                <span class="badge-text">Confidentialité garantie</span>
-              </div>
-              <div class="trust-badge">
-                <i class="fa-solid fa-headset"></i>
-                <span class="badge-text">Disponible 24/7</span>
-              </div>
-            </div>
-
-            <div class="form-terms">
-              <p>
-                En continuant, vous acceptez nos
-                <a href="/conditions-utilisation">Conditions d'utilisation</a>
-                et notre
-                <a href="/politique-confidentialite">Politique de confidentialité</a>
-                .
-              </p>
-            </div>
-            <div class="testimonial-badges compact" id="testimonialBadges">
-              <!-- Testimonials will be injected here by JavaScript -->
-            </div>
           </form>
+
+          <div class="badges-container compact">
+            <div class="trust-badge">
+              <i class="fa-solid fa-headset"></i>
+              <span class="badge-text">Disponible 24/7</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fa-solid fa-lock"></i>
+              <span class="badge-text">Confidentialité garantie</span>
+            </div>
+          </div>
+
+          <div class="testimonial-badges compact" id="testimonialBadges">
+            <!-- Testimonials will be injected here by JavaScript -->
+          </div>
+
+          <div class="form-terms">
+            <p>
+              En continuant, vous acceptez nos
+              <a href="/legal/cgvu.html">Conditions d'utilisation</a>
+              et notre
+              <a href="/legal/confidentialite.html">Politique de confidentialité</a>
+              .
+            </p>
+          </div>
         </section>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </main>
     <footer class="site-footer" role="contentinfo">
       <div class="footer-container">
