@@ -1,16 +1,10 @@
 <html lang="fr-FR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/f53fcda9ae.js" crossorigin="anonymous" async></script>
-    <script type="module" src="/scripts/main.js"></script>
+    <link rel="stylesheet" href="/styles/pages/details.css" />
+    <script type="module" src="/scripts/demandeDetails.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Details</title>
   </head>
   <body>
     <header>
@@ -239,13 +233,157 @@
       </nav>
     </header>
     <main>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      hey
+      <div class="details-container">
+        <!-- Suivi de progression -->
+        <div class="progress-tracker">
+          <div class="progress-step completed">
+            <div class="step-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="step-text">Posez une question</span>
+          </div>
+          <div class="progress-line"></div>
+
+          <div class="progress-step current">
+            <div class="step-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="step-text">Vos coordonnées</span>
+          </div>
+          <div class="progress-line"></div>
+
+          <div class="progress-step next">
+            <div class="step-icon"></div>
+            <span class="step-text">Trouvez des réponses</span>
+          </div>
+        </div>
+
+        <!-- Section du formulaire -->
+        <section class="contact-form-section">
+          <h1 class="section-title">Comment vous contacter pour vos réponses?</h1>
+          <p class="section-subtitle">Afin que notre voyant puisse vous recontacter</p>
+
+          <form id="leadForm" class="contact-form">
+            <div class="form-group">
+              <label for="firstName">Prénom</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jean" required />
+            </div>
+
+            <div class="form-group">
+              <label for="birthdate">Date de naissance</label>
+              <input type="date" id="birthdate" name="birthdate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jean@gmail.com" required />
+              <p class="form-hint">Pour recevoir votre confirmation de consultation</p>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Numéro de téléphone</label>
+              <div class="phone-input-container">
+                <div class="country-code-dropdown">
+                  <button type="button" class="country-code-selector" id="countryCodeButton">
+                    <img src="/assets/images/flags/fr.svg" alt="Drapeau" id="selectedFlag" class="country-flag" />
+                    <span id="selectedCountryCode">FR +33</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <div class="country-code-dropdown-content" id="countryCodeDropdown">
+                    <div class="country-search">
+                      <input type="text" placeholder="Rechercher un pays..." id="countrySearch" />
+                    </div>
+                    <div class="country-list">
+                      <div class="country-item" data-code="+33" data-country="FR">
+                        <img src="/assets/images/flags/fr.svg" alt="France" class="country-flag" />
+                        <span class="country-name">France</span>
+                        <span class="country-code">+33</span>
+                      </div>
+                      <div class="country-item" data-code="+32" data-country="BE">
+                        <img src="/assets/images/flags/be.svg" alt="Belgique" class="country-flag" />
+                        <span class="country-name">Belgique</span>
+                        <span class="country-code">+32</span>
+                      </div>
+                      <div class="country-item" data-code="+41" data-country="CH">
+                        <img src="/assets/images/flags/ch.svg" alt="Suisse" class="country-flag" />
+                        <span class="country-name">Suisse</span>
+                        <span class="country-code">+41</span>
+                      </div>
+                      <div class="country-item" data-code="+352" data-country="LU">
+                        <img src="/assets/images/flags/lu.svg" alt="Luxembourg" class="country-flag" />
+                        <span class="country-name">Luxembourg</span>
+                        <span class="country-code">+352</span>
+                      </div>
+                      <div class="country-item" data-code="+1" data-country="CA">
+                        <img src="/assets/images/flags/ca.svg" alt="Canada" class="country-flag" />
+                        <span class="country-name">Canada</span>
+                        <span class="country-code">+1</span>
+                      </div>
+                      <!-- D'autres pays peuvent être ajoutés ici -->
+                    </div>
+                  </div>
+                </div>
+                <input type="tel" id="phone" name="phone" placeholder="6XX XX XX XX" required />
+                <input type="hidden" id="countryCodeHidden" name="countryCode" value="+33" />
+              </div>
+              <p class="form-hint">Le numéro où votre voyant vous contactera</p>
+            </div>
+
+            <div class="form-group consent-group">
+              <div class="checkbox-container">
+                <input type="checkbox" id="termsConsent" name="termsConsent" required />
+                <label for="termsConsent">
+                  En cochant cette case, vous déclarez avoir lu & accepté nos
+                  <a href="/cgvu" target="_blank">CGVU</a>
+                  .
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group consent-group">
+              <div class="checkbox-container">
+                <input type="checkbox" id="contactConsent" name="contactConsent" />
+                <label for="contactConsent">
+                  En cochant j'accepte d'être recontacté par un voyant. J'accepte de recevoir des messages texte
+                  automatisés promotionnels et personnalisés de la part de Clairvoyances au numéro de téléphone fourni.
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Confirmer ma consultation</button>
+            </div>
+
+            <div class="badges-container compact">
+              <div class="trust-badge">
+                <i class="fa-solid fa-star"></i>
+                <span class="badge-text">4.8/5 - 20,000+ avis</span>
+              </div>
+              <div class="trust-badge">
+                <i class="fa-solid fa-lock"></i>
+                <span class="badge-text">Confidentialité garantie</span>
+              </div>
+              <div class="trust-badge">
+                <i class="fa-solid fa-headset"></i>
+                <span class="badge-text">Disponible 24/7</span>
+              </div>
+            </div>
+
+            <div class="form-terms">
+              <p>
+                En continuant, vous acceptez nos
+                <a href="/conditions-utilisation">Conditions d'utilisation</a>
+                et notre
+                <a href="/politique-confidentialite">Politique de confidentialité</a>
+                .
+              </p>
+            </div>
+            <div class="testimonial-badges compact" id="testimonialBadges">
+              <!-- Testimonials will be injected here by JavaScript -->
+            </div>
+          </form>
+        </section>
+      </div>
       <br />
       <br />
       <br />

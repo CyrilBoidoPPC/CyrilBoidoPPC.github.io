@@ -1,0 +1,231 @@
+.services-section {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow-card);
+  padding: var(--spacing-lg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.service-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--main-color);
+  border-radius: 16px 16px 0 0;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-icon {
+  color: var(--main-color);
+  width: 25px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-md);
+}
+
+.service-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.service-description {
+  color: var(--light-text-color);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+/* Styles for the new benefit badges */
+.service-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-md);
+  background-color: var(--badge-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.benefit-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+}
+
+.benefit-badge span {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  font-weight: var(--font-weight-medium);
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  padding: 0.5rem 0;
+  margin-top: auto;
+  transition: all 0.25s ease-in-out;
+}
+
+.service-link span {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.service-link i {
+  margin-left: 0.5rem;
+}
+
+.service-link:hover {
+  color: var(--hoover-color);
+  transform: translateY(-2px);
+}
+
+.service-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  background-color: var(--badge-color);
+  color: var(--main-color);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.service-badge i {
+  margin-right: 4px;
+}
+
+.services-accordion-container {
+  text-align: center;
+  margin-top: var(--spacing-md);
+  display: block;
+}
+
+.services-show-more {
+  background-color: transparent;
+  box-shadow: var(--box-shadow-settings);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.services-show-more i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.services-show-more:hover {
+  background-color: rgba(255, 0, 157, 0.1);
+  transform: var(--btn-transform-up);
+}
+
+.services-show-more.active i {
+  transform: rotate(180deg);
+}
+
+/* Initially hide cards beyond the first 2 on mobile */
+.service-card {
+  display: none;
+}
+
+/* Show first 2 cards by default */
+.service-card:nth-child(-n + 2) {
+  display: flex;
+}
+
+/* Show all remaining cards when expanded */
+.service-card:nth-child(n + 3).show {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  /* Show all cards on tablet+ regardless of show class */
+  .service-card {
+    display: flex;
+  }
+
+  .services-accordion-container {
+    display: none;
+  }
+}
+
+/* Media Queries for Desktops */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Large Desktops */
+@media (min-width: 1280px) {
+  .services-section .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .service-benefits {
+    padding: 1rem;
+  }
+
+  .benefit-badge {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .benefit-badge i {
+    font-size: 1rem;
+  }
+
+  .benefit-badge span {
+    font-size: 0.9rem;
+  }
+}

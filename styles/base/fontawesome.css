@@ -83,6 +83,9 @@
 .fa-check-circle:before {
   content: "\f058";
 }
+.fa-check:before {
+  content: "\f00c";
+}
 .fa-clock:before {
   content: "\f017";
 }

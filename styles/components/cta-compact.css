@@ -1,0 +1,188 @@
+/* Compact CTA Component Styles */
+.compact-cta-wrapper {
+  max-width: 1000px;
+  position: relative;
+}
+
+.compact-cta-container {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, var(--main-color) 0%, #ff6b8b 100%);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.compact-cta-content {
+  padding: var(--spacing-md) var(--spacing-md);
+  text-align: center;
+  color: white;
+}
+
+.compact-cta-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.compact-cta-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.compact-cta-input-wrapper {
+  position: relative;
+  margin-bottom: var(--spacing-sm);
+}
+
+.compact-cta-input-wrapper textarea {
+  width: 100%;
+  resize: none;
+  padding: 2.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.compact-cta-input-wrapper textarea:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.compact-cta-input-wrapper textarea::placeholder {
+  color: var(--light-text-color);
+  opacity: 0.8;
+}
+
+.clear-button.compact {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  color: var(--light-text-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.clear-button.compact.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.compact-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.compact-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.compact-cta-button.primary {
+  background-color: white;
+  color: var(--main-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.compact-cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.compact-cta-button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.compact-cta-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .compact-cta-content {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .compact-cta-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .compact-cta-button {
+    min-width: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compact-cta-wrapper {
+    margin: var(--spacing-xl) auto;
+  }
+
+  .compact-cta-content {
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+
+  .compact-cta-form {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .compact-cta-input-wrapper {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .compact-cta-actions {
+    width: auto;
+  }
+}
+
+/* For the largest screens, keep everything in a single row */
+@media (min-width: 1200px) {
+  .compact-cta-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+
+  .compact-cta-title {
+    flex: 0 0 25%;
+    margin-bottom: 0;
+    padding-right: var(--spacing-md);
+  }
+
+  .compact-cta-form {
+    flex: 0 0 75%;
+    margin: 0;
+  }
+}
