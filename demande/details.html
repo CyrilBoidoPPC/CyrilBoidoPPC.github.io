@@ -279,9 +279,30 @@
                 required />
             </div>
 
-            <div class="form-group">
-              <label for="birthdate">Votre date de naissance</label>
-              <input type="date" id="birthdate" name="birthdate" required />
+            <div class="form-group birthdate-group">
+              <label for="birthdate-day">Votre date de naissance</label>
+              <div class="birthdate-inputs">
+                <div class="birthdate-field">
+                  <select id="birthdate-day" name="birthdate-day" required aria-label="Jour">
+                    <option value="" disabled selected>Jour</option>
+                    <!-- Day options will be populated by JS -->
+                  </select>
+                </div>
+                <div class="birthdate-field">
+                  <select id="birthdate-month" name="birthdate-month" required aria-label="Mois">
+                    <option value="" disabled selected>Mois</option>
+                    <!-- Month options will be populated by JS -->
+                  </select>
+                </div>
+                <div class="birthdate-field">
+                  <select id="birthdate-year" name="birthdate-year" required aria-label="Année">
+                    <option value="" disabled selected>Année</option>
+                    <!-- Year options will be populated by JS -->
+                  </select>
+                </div>
+                <input type="hidden" id="birthdate" name="birthdate" />
+              </div>
+              <p class="form-hint">Pour des prédictions personnalisées selon votre signe astrologique</p>
             </div>
 
             <div class="form-group">
@@ -357,11 +378,7 @@
             <div class="form-group consent-group">
               <div class="checkbox-container">
                 <input type="checkbox" id="termsConsent" name="termsConsent" required />
-                <label for="termsConsent">
-                  En cochant cette case, je déclare avoir lu & accepté les
-                  <a href="/cgvu" target="_blank">CGVU</a>
-                  .
-                </label>
+                <label for="termsConsent">En cochant cette case, je déclare avoir lu & accepté les CGVU.</label>
               </div>
             </div>
 
