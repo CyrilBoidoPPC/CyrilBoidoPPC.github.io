@@ -134,7 +134,7 @@
   width: 100%;
   padding: 1rem;
   border: 1px solid #e0e0e0;
-  color: var(--text-color);
+  color: var(--light-text-color);
   border-radius: 8px;
   font-size: var(--font-size-base);
   background-color: #f9f9f9;
@@ -155,25 +155,27 @@
   flex: 1.2;
 }
 
-/* Phone input container */
+/* Phone field fixes - Mobile first approach */
+
+/* Fix for the container */
 .phone-input-container {
   display: flex;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #f9f9f9;
+  /* Removed overflow: hidden that was causing the dropdown to be invisible */
+  width: 100%; /* Ensure full width */
+  max-width: 100%; /* Prevent overflow on mobile */
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
-.phone-input-container:focus-within {
-  border-color: var(--main-color);
-  box-shadow: 0 0 0 3px rgba(222, 23, 149, 0.1);
-}
-
-/* Country code dropdown */
+/* Fix for the country code dropdown */
 .country-code-dropdown {
   position: relative;
-  min-width: 95px;
+  min-width: 85px; /* Reduced min-width */
+  max-width: 110px; /* Set max-width to prevent overflow */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Country selector button */
@@ -181,49 +183,86 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0.75rem;
+  padding: 0.75rem 0.5rem; /* Reduced horizontal padding */
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Slightly smaller font */
   color: var(--text-color);
   transition: background-color 0.2s ease;
+  white-space: nowrap;
 }
 
-.country-code-selector:hover {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-.country-code-selector:focus {
-  outline: none;
-}
-
-/* Flag image */
+/* Flag image - slightly smaller */
 .country-flag {
-  width: 24px;
-  height: 18px;
+  width: 22px;
+  height: 16px;
   border-radius: 3px;
   object-fit: cover;
-  margin-right: 0.4rem;
+  margin-right: 0.2rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Selected country code text */
 #selectedCountryCode {
+  font-size: 0.7rem;
+  color: var(--light-text-color);
+  font-weight: var(--font-weight-medium);
+  margin-right: 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 50px;
-  margin-right: 0.25rem;
-  font-weight: 500;
 }
 
-/* Dropdown caret icon */
+/* Fix for the caret icon */
 .country-code-selector i {
-  font-size: 0.8rem;
+  font-size: 0.6rem; /* Smaller icon */
   margin-left: auto;
+  margin-right: -0.4rem;
   color: var(--light-text-color);
   transition: transform 0.2s ease;
+}
+
+/* Telephone input */
+.phone-input-container input[type="tel"] {
+  flex: 1;
+  width: 100%; /* Ensure proper width */
+  padding: 0.75rem 0.5rem; /* Reduce horizontal padding */
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease;
+}
+
+/* Fix dropdown position for iOS */
+.country-code-dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 100;
+  width: 260px;
+  max-height: 280px;
+  background-color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  /* Fix for iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Critical: Make sure the dropdown appears when open class is applied */
+.country-code-dropdown-content.open {
+  display: block;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Fix for iOS momentum scrolling */
+.country-list {
+  -webkit-overflow-scrolling: touch;
+  padding: 0.25rem 0;
 }
 
 /* Telephone input */
@@ -678,5 +717,39 @@
   .badges-container.compact {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* Position fix for dropdown on small screens */
+@media (max-width: 320px) {
+  .country-code-dropdown-content {
+    width: 230px;
+    left: -20px; /* Adjust to keep it visible on very small screens */
+  }
+}
+
+/* Better responsive scaling for larger screens */
+@media (min-width: 768px) {
+  .country-code-dropdown {
+    min-width: 95px;
+    max-width: 120px;
+  }
+
+  #selectedCountryCode {
+    max-width: 60px;
+  }
+
+  .country-code-selector {
+    padding: 0.8rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .phone-input-container input[type="tel"] {
+    padding: 0.8rem 1rem;
+  }
+
+  .country-flag {
+    width: 24px;
+    height: 18px;
   }
 }
