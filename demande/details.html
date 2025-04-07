@@ -248,7 +248,7 @@
             <div class="step-icon">
               <i class="fa-solid fa-check"></i>
             </div>
-            <span class="step-text">Vos coordonnées</span>
+            <span class="step-text">Votre contact</span>
           </div>
           <div class="progress-line"></div>
 
@@ -260,13 +260,23 @@
 
         <!-- Section du formulaire -->
         <section class="lead-form-section">
-          <h1 class="section-title">Un [voyant] à bien recu votre question</h1>
-          <p class="section-subtitle">Comment peut-il vous donner les reponses ?</p>
+          <h1 class="section-title">Votre [voyant] à bien recu votre question</h1>
+          <p class="section-subtitle">
+            Pour recevoir vos réponses, laissez simplement votre contact, et tout vous sera immédiatement dévoilé !
+          </p>
 
-          <form id="leadForm" class="lead-form">
+          <form id="leadForm" class="lead-form" action="#" method="GET">
             <div class="form-group">
               <label for="firstName">Prénom</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Jean" required />
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                maxlength="50"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
+                title="30 caractères maximum, chiffres non autorisés"
+                placeholder="Jean"
+                required />
             </div>
 
             <div class="form-group">
@@ -277,7 +287,7 @@
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="jean@gmail.com" required />
-              <p class="form-hint">Pour recevoir votre confirmation de consultation</p>
+              <p class="form-hint">Pour obtenir des détails sur votre demande</p>
             </div>
 
             <div class="form-group">
@@ -341,7 +351,7 @@
                 <input type="tel" id="phone" name="phone" placeholder="6XX XX XX XX" required />
                 <input type="hidden" id="countryCodeHidden" name="countryCode" value="+33" />
               </div>
-              <p class="form-hint">Le numéro où votre voyant vous contactera</p>
+              <p class="form-hint">Où votre [voyant] peut-il vous joindre ?</p>
             </div>
 
             <div class="form-group consent-group">
