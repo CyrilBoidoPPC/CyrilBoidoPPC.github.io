@@ -518,6 +518,9 @@
   background-color: var(--hoover-color);
   transform: translateY(-2px);
 }
+.btn-primary i {
+  margin-left: 0.25rem;
+}
 
 /* Terms text */
 .form-terms {
@@ -752,5 +755,11 @@
   .country-flag {
     width: 24px;
     height: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .details-container {
+    margin-top: 9rem;
   }
 }
