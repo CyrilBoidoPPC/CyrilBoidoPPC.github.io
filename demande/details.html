@@ -280,6 +280,7 @@
                 pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
                 title="30 caractères maximum, chiffres non autorisés"
                 placeholder="Elisabeth"
+                autocomplete="given-name"
                 required />
               <p class="form-hint">Pour le plaisir de vous connaître</p>
             </div>
@@ -312,7 +313,13 @@
 
             <div class="form-group">
               <label for="email">Votre email</label>
-              <input type="email" id="email" name="email" placeholder="elisabeth@gmail.com" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="elisabeth@gmail.com"
+                autocomplete="email"
+                required />
               <p class="form-hint">Réservé à vos prédictions</p>
             </div>
 
@@ -374,7 +381,7 @@
                     </div>
                   </div>
                 </div>
-                <input type="tel" id="phone" name="phone" placeholder="6XX XX XX XX" required />
+                <input type="tel" id="phone" name="phone" placeholder="6XX XX XX XX" autocomplete="tel" required />
                 <input type="hidden" id="countryCodeHidden" name="countryCode" value="+33" />
               </div>
               <p class="form-hint">Pour obtenir les réponses que vous méritez</p>
@@ -576,6 +583,7 @@
                   name="email"
                   id="footer-email"
                   placeholder="Votre adresse email"
+                  autocomplete="email"
                   required
                   aria-required="true" />
                 <button type="submit" class="newsletter-button">
