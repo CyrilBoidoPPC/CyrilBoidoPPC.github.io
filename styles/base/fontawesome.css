@@ -136,6 +136,9 @@
 .fa-hand-sparkles:before {
   content: "\e05d";
 }
+.fa-info-circle:before {
+  content: "\f05a";
+}
 .fa-headset:before {
   content: "\f590";
 }

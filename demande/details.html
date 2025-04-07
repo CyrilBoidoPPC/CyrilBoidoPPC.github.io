@@ -267,7 +267,7 @@
 
           <form id="leadForm" class="lead-form" action="#" method="GET">
             <div class="form-group">
-              <label for="firstName">Prénom</label>
+              <label for="firstName">Votre prénom</label>
               <input
                 type="text"
                 id="firstName"
@@ -275,23 +275,23 @@
                 maxlength="50"
                 pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
                 title="30 caractères maximum, chiffres non autorisés"
-                placeholder="Jean"
+                placeholder="Elisabeth"
                 required />
             </div>
 
             <div class="form-group">
-              <label for="birthdate">Date de naissance</label>
+              <label for="birthdate">Votre date de naissance</label>
               <input type="date" id="birthdate" name="birthdate" required />
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="jean@gmail.com" required />
+              <label for="email">Votre email</label>
+              <input type="email" id="email" name="email" placeholder="elisabeth@gmail.com" required />
               <p class="form-hint">Pour obtenir des détails sur votre demande</p>
             </div>
 
             <div class="form-group">
-              <label for="phone">Numéro de téléphone</label>
+              <label for="phone">Votre numéro de téléphone</label>
               <div class="phone-input-container">
                 <div class="country-code-dropdown">
                   <button type="button" class="country-code-selector" id="countryCodeButton">
@@ -351,14 +351,14 @@
                 <input type="tel" id="phone" name="phone" placeholder="6XX XX XX XX" required />
                 <input type="hidden" id="countryCodeHidden" name="countryCode" value="+33" />
               </div>
-              <p class="form-hint">Où votre [voyant] peut-il vous joindre ?</p>
+              <p class="form-hint">Votre numéro nous permet de vous transmettre vos réponses</p>
             </div>
 
             <div class="form-group consent-group">
               <div class="checkbox-container">
                 <input type="checkbox" id="termsConsent" name="termsConsent" required />
                 <label for="termsConsent">
-                  En cochant cette case, vous déclarez avoir lu & accepté nos
+                  En cochant cette case, je déclare avoir lu & accepté les
                   <a href="/cgvu" target="_blank">CGVU</a>
                   .
                 </label>
@@ -389,6 +389,11 @@
               <i class="fa-solid fa-lock"></i>
               <span class="badge-text">Confidentialité garantie</span>
             </div>
+          </div>
+
+          <div class="next-page-info">
+            <i class="fa-solid fa-info-circle"></i>
+            <p>Vos réponses se trouvent à la page suivante, remplissez le formulaire pour les trouver</p>
           </div>
 
           <div class="testimonial-badges compact" id="testimonialBadges">

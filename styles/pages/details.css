@@ -62,7 +62,7 @@
   background-color: var(--main-color);
   flex: 1;
   position: relative;
-  top: -14px;
+  top: -21px;
   z-index: 1;
 }
 
@@ -484,7 +484,7 @@
   margin-bottom: 0 !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
-  justify-content: center !important;
+  justify-content: space-around !important;
 }
 
 .trust-badge {
@@ -505,6 +505,42 @@
   font-weight: var(--font-weight-medium);
 }
 
+/* Info box styles */
+.next-page-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: rgba(222, 23, 149, 0.1);
+  border-left: 3px solid var(--main-color);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.next-page-info i {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.next-page-info p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .next-page-info {
+    padding: 1rem 1.2rem;
+  }
+
+  .next-page-info p {
+    font-size: 1rem;
+  }
+}
+
 /* Testimonial badges styles */
 .testimonial-badges {
   display: flex;
@@ -516,7 +552,7 @@
 
 .testimonial-badge {
   background-color: var(--badge-color);
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
@@ -529,7 +565,8 @@
 }
 
 .testimonial-text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
   color: var(--light-text-color);
 }
 
