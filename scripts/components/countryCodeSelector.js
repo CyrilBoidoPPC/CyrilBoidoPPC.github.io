@@ -86,7 +86,7 @@ export function initializeCountryCodeSelector() {
   function updatePhoneInputPlaceholder(country) {
     switch (country) {
       case "FR":
-        phoneInput.placeholder = "06 XX XX XX XX";
+        phoneInput.placeholder = "06 XX XX XX XX ou +33 6 XX XX XX XX";
         break;
       case "BE":
         phoneInput.placeholder = "047X XX XX XX";
@@ -99,6 +99,12 @@ export function initializeCountryCodeSelector() {
         break;
       case "CA":
         phoneInput.placeholder = "(514) XXX-XXXX";
+        break;
+      case "GP":
+        phoneInput.placeholder = "690 XX XX XX";
+        break;
+      case "MQ":
+        phoneInput.placeholder = "696 XX XX XX";
         break;
       default:
         phoneInput.placeholder = "Votre numéro";
