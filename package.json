@@ -23,8 +23,5 @@
   "devDependencies": {
     "vite": "^6.2.4",
     "vite-plugin-purgecss": "^0.2.13"
-  },
-  "dependencies": {
-    "libphonenumber-js": "^1.12.6"
   }
 }

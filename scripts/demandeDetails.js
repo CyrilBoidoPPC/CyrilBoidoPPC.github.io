@@ -1,8 +1,8 @@
 import { initializeSpecialistType } from "/scripts/utils/referrerSpecialist.js";
 import { initializeHeader } from "/scripts/components/header.js";
 import { initializeTestimonialBadges } from "/scripts/components/demandeTestimonials.js";
-import { initializeCountryCodeSelector } from "/scripts/components/countryCodeSelector.js";
-import { initializeBirthdateFields } from "/scripts/components/datePicker.js";
+import { initializeCountryCodeSelector } from "/scripts/form/countryCodeSelector.js";
+import { initializeBirthdateFields } from "/scripts/form/datePicker.js";
 
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {

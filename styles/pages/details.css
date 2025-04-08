@@ -121,6 +121,18 @@
   background-color: #f9f9f9;
 }
 
+/* Telephone input */
+.phone-input-container input[type="tel"] {
+  flex: 1;
+  width: 100%; /* Ensure proper width */
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease;
+  z-index: 1;
+}
+
 .birthdate-inputs {
   display: flex;
   gap: 0.5rem;
@@ -174,7 +186,7 @@
 /* Fix for the country code dropdown */
 .country-code-dropdown {
   position: relative;
-  min-width: 85px; /* Reduced min-width */
+  padding-right: 5px;
   max-width: 110px; /* Set max-width to prevent overflow */
   flex-shrink: 0; /* Prevent shrinking */
 }
@@ -223,19 +235,6 @@
   color: var(--light-text-color);
   transition: transform 0.2s ease;
 }
-
-/* Telephone input */
-.phone-input-container input[type="tel"] {
-  flex: 1;
-  width: 100%; /* Ensure proper width */
-  padding: 0.75rem 0.5rem; /* Reduce horizontal padding */
-  border: none;
-  border-left: 1px solid #e0e0e0;
-  font-size: 1rem;
-  background-color: #f9f9f9;
-  transition: background-color 0.2s ease;
-}
-
 /* Fix dropdown position for iOS */
 .country-code-dropdown-content {
   display: none;
@@ -264,22 +263,6 @@
 .country-list {
   -webkit-overflow-scrolling: touch;
   padding: 0.25rem 0;
-}
-
-/* Telephone input */
-.phone-input-container input[type="tel"] {
-  flex: 1;
-  padding: 0.75rem;
-  border: none;
-  border-left: 1px solid #e0e0e0;
-  font-size: 1rem;
-  background-color: #f9f9f9;
-  transition: background-color 0.2s ease;
-}
-
-.phone-input-container input[type="tel"]:focus {
-  outline: none;
-  background-color: #fff;
 }
 
 /* Dropdown content */
@@ -316,33 +299,6 @@
 
 .country-code-dropdown-content::-webkit-scrollbar-thumb:hover {
   background: #bbb;
-}
-
-/* Search input area */
-.country-search {
-  position: sticky;
-  top: 0;
-  padding: 0.75rem;
-  border-bottom: 1px solid #eee;
-  background-color: white;
-  z-index: 2;
-}
-
-.country-search input {
-  width: 100%;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  background-color: #f9f9f9;
-  transition: all 0.2s ease;
-}
-
-.country-search input:focus {
-  outline: none;
-  border-color: var(--main-color);
-  background-color: white;
-  box-shadow: 0 0 0 3px rgba(222, 23, 149, 0.05);
 }
 
 /* List of countries */
@@ -449,15 +405,6 @@
   color: var(--light-text-color);
   font-size: 0.9rem;
   font-style: italic;
-}
-
-/* Phone input validation styling */
-.phone-input-container input[type="tel"]:valid {
-  background-color: rgba(240, 255, 240, 0.5);
-}
-
-.phone-input-container input[type="tel"]:invalid:not(:placeholder-shown) {
-  background-color: rgba(255, 240, 240, 0.5);
 }
 
 /* Add a little indicator to show the dropdown is interactive */
@@ -660,18 +607,6 @@
   width: 250px;
   max-height: 300px;
   overflow-y: auto;
-}
-
-.country-search {
-  padding: 0.75rem;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.country-search input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
 }
 
 .country-list {

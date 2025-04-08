@@ -319,7 +319,8 @@
                 id="email"
                 name="email"
                 placeholder="elisabeth@gmail.com"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+                maxlength="100"
                 title="Veuillez entrer une adresse email valide"
                 autocomplete="email"
                 aria-required="true"
@@ -336,13 +337,10 @@
                 <div class="country-code-dropdown">
                   <button type="button" class="country-code-selector" id="countryCodeButton">
                     <img src="/assets/images/flags/fr.svg" alt="Drapeau" id="selectedFlag" class="country-flag" />
-                    <span id="selectedCountryCode">FR +33</span>
+                    <span id="selectedCountryCode">FR</span>
                     <i class="fa-solid fa-chevron-down"></i>
                   </button>
                   <div class="country-code-dropdown-content" id="countryCodeDropdown">
-                    <div class="country-search">
-                      <input type="text" placeholder="Rechercher un pays..." id="countrySearch" />
-                    </div>
                     <div class="country-list">
                       <div class="country-item" data-code="+33" data-country="FR">
                         <img src="/assets/images/flags/fr.svg" alt="France" class="country-flag" />
@@ -394,7 +392,8 @@
                   name="phone"
                   placeholder="6XX XX XX XX"
                   autocomplete="tel"
-                  pattern="[0-9\s\(\)\+\-]{8,15}"
+                  pattern="[0-9\s\(\)\+\-]{10,16}"
+                  maxlength="16"
                   title="Numéro de téléphone au format national ou international"
                   aria-required="true"
                   required />
@@ -405,14 +404,14 @@
 
             <div class="form-group consent-group">
               <div class="checkbox-container">
-                <input type="checkbox" id="termsConsent" name="termsConsent" />
+                <input type="checkbox" id="termsConsent" name="termsConsent" title="Ce champ est obligatoire" />
                 <label for="termsConsent">En cochant cette case, je déclare avoir lu & accepté les CGVU.</label>
               </div>
             </div>
 
             <div class="form-group consent-group">
               <div class="checkbox-container">
-                <input type="checkbox" id="leadConsent" name="leadConsent" />
+                <input type="checkbox" id="leadConsent" name="leadConsent" title="Ce champ est obligatoire" />
                 <label for="leadConsent">
                   En cochant j'accepte d'être recontacté par un voyant. J'accepte de recevoir des messages texte
                   automatisés promotionnels et personnalisés de la part de Clairvoyances au numéro de téléphone fourni.
@@ -603,6 +602,7 @@
                   id="footer-email"
                   placeholder="Votre adresse email"
                   autocomplete="email"
+                  maxlength="100"
                   required
                   aria-required="true" />
                 <button type="submit" class="newsletter-button">
