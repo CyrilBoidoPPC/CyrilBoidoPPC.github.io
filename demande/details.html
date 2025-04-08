@@ -278,9 +278,10 @@
                 name="firstName"
                 maxlength="50"
                 pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]+"
-                title="30 caractères maximum, chiffres non autorisés"
+                title="Lettres, espaces et tirets uniquement"
                 placeholder="Elisabeth"
                 autocomplete="given-name"
+                aria-required="true"
                 required />
               <p class="form-hint">Pour le plaisir de vous connaître</p>
             </div>
@@ -289,19 +290,19 @@
               <label for="birthdate-day">Votre date de naissance</label>
               <div class="birthdate-inputs">
                 <div class="birthdate-field">
-                  <select id="birthdate-day" name="birthdate-day" required aria-label="Jour">
+                  <select id="birthdate-day" name="birthdate-day" required aria-required="true" aria-label="Jour">
                     <option value="" disabled selected>Jour</option>
                     <!-- Day options will be populated by JS -->
                   </select>
                 </div>
                 <div class="birthdate-field">
-                  <select id="birthdate-month" name="birthdate-month" required aria-label="Mois">
+                  <select id="birthdate-month" name="birthdate-month" required aria-required="true" aria-label="Mois">
                     <option value="" disabled selected>Mois</option>
                     <!-- Month options will be populated by JS -->
                   </select>
                 </div>
                 <div class="birthdate-field">
-                  <select id="birthdate-year" name="birthdate-year" required aria-label="Année">
+                  <select id="birthdate-year" name="birthdate-year" required aria-required="true" aria-label="Année">
                     <option value="" disabled selected>Année</option>
                     <!-- Year options will be populated by JS -->
                   </select>
@@ -318,7 +319,10 @@
                 id="email"
                 name="email"
                 placeholder="elisabeth@gmail.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                title="Veuillez entrer une adresse email valide"
                 autocomplete="email"
+                aria-required="true"
                 required />
               <p class="form-hint">Réservé à vos prédictions</p>
             </div>
@@ -384,7 +388,16 @@
                     </div>
                   </div>
                 </div>
-                <input type="tel" id="phone" name="phone" placeholder="6XX XX XX XX" autocomplete="tel" required />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="6XX XX XX XX"
+                  autocomplete="tel"
+                  pattern="[0-9\s\(\)\+\-]{8,15}"
+                  title="Numéro de téléphone au format national ou international"
+                  aria-required="true"
+                  required />
                 <input type="hidden" id="countryCodeHidden" name="countryCode" value="+33" />
               </div>
               <p class="form-hint">Pour obtenir les réponses que vous méritez</p>
@@ -392,7 +405,7 @@
 
             <div class="form-group consent-group">
               <div class="checkbox-container">
-                <input type="checkbox" id="termsConsent" name="termsConsent" required />
+                <input type="checkbox" id="termsConsent" name="termsConsent" />
                 <label for="termsConsent">En cochant cette case, je déclare avoir lu & accepté les CGVU.</label>
               </div>
             </div>

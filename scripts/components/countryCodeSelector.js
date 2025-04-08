@@ -100,6 +100,9 @@ export function initializeCountryCodeSelector() {
       case "CA":
         phoneInput.placeholder = "(514) XXX-XXXX";
         break;
+      case "MC":
+        phoneInput.placeholder = "97 XX XX XX";
+        break;
       case "GP":
         phoneInput.placeholder = "690 XX XX XX";
         break;
