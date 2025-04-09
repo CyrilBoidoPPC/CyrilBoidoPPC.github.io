@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import htmlPurge from "vite-plugin-purgecss";
 import { resolve } from "path";
+import sitemap from "vite-plugin-sitemap";
 
 export default defineConfig({
   root: "./",
@@ -43,6 +44,43 @@ export default defineConfig({
     htmlPurge({
       content: ["./**/*.html", "./scripts/**/*.js"],
       safelist: ["open", "active", "show", "visible", "animated", "carousel-dot", "visually-hidden", "testimonial-dot"], // Classes added by JavaScript
+    }),
+    sitemap({
+      hostname: "https://www.clairvoyances.fr",
+      lastmod: new Date().toISOString().split("T")[0], // Format as YYYY-MM-DD
+      changefreq: "monthly",
+      priority: 1.0,
+      exclude: ["/demande/*"], // Exclude legal pages if you want
+      outDir: "dist", // Output directory should match your build outDir
+      routes: [
+        { path: "/", lastmod: new Date().toISOString().split("T")[0], changefreq: "weekly", priority: 1.0 },
+
+        // Consultation pages - higher priority
+        { path: "/consultation/question-voyance-gratuite.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/consultation/voyance-par-telephone.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/consultation/se-faire-rappeler.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/consultation/voyance-par-tchat.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/consultation/voyance-sans-cb.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/consultation/voyance-par-sms.html", changefreq: "monthly", priority: 1.0 },
+
+        // Divination pages
+        { path: "/divination/voyance.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/divination/mediumnite.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/divination/tarologie.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/divination/numerologie.html", changefreq: "monthly", priority: 1.0 },
+        { path: "/divination/astrologie.html", changefreq: "monthly", priority: 1.0 },
+
+        // Other important pages
+        { path: "/contact.html", changefreq: "monthly", priority: 0.5 },
+
+        // Legal pages - lower priority but still indexed
+        { path: "/legal/mentions-legales.html", changefreq: "yearly", priority: 0.3 },
+        { path: "/legal/cgvu.html", changefreq: "yearly", priority: 0.3 },
+        { path: "/legal/confidentialite.html", changefreq: "yearly", priority: 0.3 },
+        { path: "/legal/donnees-personnelles.html", changefreq: "yearly", priority: 0.3 },
+        { path: "/legal/partenaires.html", changefreq: "yearly", priority: 0.3 },
+        { path: "/legal/protection-donnees.html", changefreq: "yearly", priority: 0.3 },
+      ],
     }),
   ],
 });

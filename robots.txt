@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /demande/
+Sitemap: https://www.clairvoyances.fr/sitemap.xml

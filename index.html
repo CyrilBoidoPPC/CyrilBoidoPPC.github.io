@@ -3,69 +3,81 @@
   <head>
     <!-- Tu n'as rien à faire ici.. -->
     <meta charset="UTF-8" />
-    <title>Voyance en ligne | Consultations sérieuses | Clairvoyances.fr</title>
+    <title>Clairvoyances.fr | Voyance en ligne | Consultations sérieuses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="dns-prefetch preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preload" href="/assets/fonts/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" />
+    <link rel="preload" href="/assets/fonts/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" />
 
     <link rel="canonical" href="https://www.clairvoyances.fr" />
 
     <link rel="stylesheet" href="/styles/main.css" />
     <script type="module" src="/scripts/main.js"></script>
 
-    <!-- Primary meta tags for SEO -->
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
     <meta
       name="description"
-      content="Consultez nos voyants et médiums pour une voyance gratuite par téléphone. Obtenez des réponses à vos questions sur l'amour, le travail et l'avenir avec Clairvoyances." />
+      content="Amour, argent, travail : obtenez des réponses claires dès maintenant ! Voyance en ligne et par téléphone sans attente. 20.000+ clients satisfaits." />
     <meta
       name="keywords"
-      content="voyance en ligne, voyance, médium, voyant, consultation voyance, voyance par téléphone, tarot, numérologie" />
+      content="voyance en ligne, voyance par téléphone, voyance gratuite, consultation voyance, clairvoyances, voyance, médium, voyant, tarot, numérologie" />
     <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/images/clairvoyances-icon.svg" color="#de1795" />
+    <link rel="mask-icon" href="assets/images/favicon/clairvoyances-icon.svg.svg" color="#de1795" />
     <meta name="theme-color" content="#de1795" />
     <meta name="robots" content="index, follow max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Open Graph metadata for social sharing (Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="Voyance Gratuite par Téléphone | Consultation Médium | Clairvoyances" />
+    <meta property="og:title" content="Clairvoyances.fr | Voyance en ligne | Consultations sérieuses" />
     <meta
       property="og:description"
-      content="Consultez nos voyants et médiums pour une voyance gratuite par téléphone. Obtenez des réponses à vos questions sur l'amour, le travail et l'avenir." />
-    <meta property="og:image" content="https://www.clairvoyances.fr/images/clairvoyances-og-image.jpg" />
+      content="Amour, argent, travail : obtenez des réponses claires dès maintenant ! Voyance en ligne ou par téléphone sans attente. Consultations par tchat, SMS ou audiotel - 20.000+ clients satisfaits." />
+    <meta property="og:image" content="https://www.clairvoyances.fr/assets/images/clairvoyances-voyance-en-ligne.png" />
     <meta property="og:url" content="https://www.clairvoyances.fr" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Clairvoyances" />
     <meta property="og:locale" content="fr_FR" />
+    <meta property="fb:pages" content="100087468905703" />
 
-    <!-- Twitter Card metadata for social sharing (Twitter) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Voyance Gratuite par Téléphone | Consultation Médium | Clairvoyances" />
+    <meta name="twitter:title" content="Clairvoyances.fr | Voyance en ligne | Consultations sérieuses" />
     <meta
       name="twitter:description"
-      content="Consultez nos voyants et médiums pour une voyance gratuite par téléphone. Obtenir des réponses sur votre avenir." />
-    <meta name="twitter:image" content="https://www.clairvoyances.fr/images/clairvoyances-twitter-image.jpg" />
-    <meta name="twitter:site" content="@Clairvoyances" />
+      content="Amour, argent, travail : obtenez des réponses claires dès maintenant ! Voyance en ligne ou par téléphone sans attente. Consultations par tchat, SMS ou audiotel - 20.000+ clients satisfaits." />
+    <meta
+      name="twitter:image"
+      content="https://www.clairvoyances.fr/assets/images/clairvoyances-voyance-en-ligne.png" />
 
-    <!-- JSON-LD structured data (Schema.org) -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CLQ9WT");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Clairvoyances",
         "url": "https://www.clairvoyances.fr",
-        "logo": "https://www.clairvoyances.fr/images/clairvoyances-logo.png",
-        "description": "Service de voyance et médiumnité en ligne par téléphone, tchat et SMS",
+        "logo": "https://www.clairvoyances.fr/assets/images/clairvoyances-logo.png",
+        "description": "Voyance et médiumnité en ligne par téléphone, tchat et SMS",
         "telephone": "+33423092423",
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "FR"
         },
-        "sameAs": [
-          "https://www.facebook.com/clairvoyances",
-          "https://twitter.com/clairvoyances",
-          "https://www.instagram.com/clairvoyances"
-        ]
+        "sameAs": ["https://www.facebook.com/profile.php?id=100087468905703"]
       }
     </script>
 
@@ -74,27 +86,23 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Clairvoyances",
-        "url": "https://www.clairvoyances.fr",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.clairvoyances.fr/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "url": "https://www.clairvoyances.fr"
       }
     </script>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Voyance par téléphone",
+        "@type": "ProfessionalService",
+        "name": "Question de voyance gratuite",
         "provider": {
           "@type": "Organization",
-          "name": "Clairvoyances"
+          "name": "Clairvoyances",
+          "logo": "https://www.clairvoyances.fr/assets/images/clairvoyances-logo.png"
         },
-        "description": "Service de consultation de voyance et médiumnité par téléphone",
+        "description": "Posez votre question gratuitement et obtenez une réponse immédiate de nos voyants.",
         "serviceType": "Voyance",
-        "areaServed": "FR",
+        "areaServed": ["FR", "BE", "CH", "LU", "CA", "MC", "GP", "MQ"],
         "availableChannel": {
           "@type": "ServiceChannel",
           "serviceUrl": "https://www.clairvoyances.fr",
@@ -115,8 +123,15 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
-          "ratingCount": "20000",
+          "ratingCount": "21235",
           "bestRating": "5"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Première question gratuite",
+          "availability": "https://schema.org/InStock"
         }
       }
     </script>
@@ -126,7 +141,7 @@
       <nav class="navbar" aria-label="Navigation principale">
         <a class="header-logo" href="/" title="Accueil Clairvoyances">
           <img
-            src="/assets/images/clairvoyances-logo.png"
+            src="/assets/images/clairvoyances-logo.webp"
             alt="Logo Clairvoyances - Voyance en ligne"
             width="200"
             height="80" />
@@ -364,7 +379,10 @@
         <div class="hero-content">
           <h1>Voyance en ligne</h1>
           <h2>Consultations sérieuses par téléphone</h2>
-          <p>Recevez des prédictions sur votre vie amoureuse, sentimentale, professionnelle et personnelle.</p>
+          <p>
+            Prédictions précises sur votre vie amoureuse, carrière et projets personnels - par voyance en ligne avec des
+            experts confirmés
+          </p>
 
           <form class="hero-form-cta" action="#" method="get">
             <label for="userQuestion" class="visually-hidden">Posez votre question de voyance</label>
@@ -401,8 +419,8 @@
         </div>
         <div class="hero-image-container">
           <img
-            src="/assets/images/hero3.png"
-            alt="Consultation personnalisée avec un voyant professionnel pour prédictions sur l'amour et le travail"
+            src="/assets/images/clairvoyances-voyance-en-ligne.webp"
+            alt="Posez votre question de voyance gratuitement en ligne"
             width="600"
             height="900"
             fetchpriority="high" />
@@ -411,6 +429,7 @@
       <section class="testimonials-section" id="temoignages">
         <div class="testimonials-container">
           <h2 class="section-title">Ce qu'en disent nos clients</h2>
+          <p class="section-subtitle">Ils ont posé leurs questions de voyance</p>
 
           <div class="testimonials-slider">
             <div class="testimonials-track" id="testimonialsTrack">
@@ -425,13 +444,13 @@
                   </div>
                   <p class="testimonial-rating">EXCEPTIONNEL</p>
                   <p class="testimonial-text" itemprop="reviewBody">
-                    "J'ai consulté Elise pour la première fois il y a trois mois concernant ma vie amoureuse. Ses
+                    "J'ai consulté Ashley pour la première fois il y a trois mois concernant ma vie amoureuse. Ses
                     prédictions se sont réalisées avec une précision étonnante. Je recommande vivement ses services."
                   </p>
                   <div class="testimonial-author-info">
                     <div class="testimonial-avatar">
                       <img
-                        src="/assets/images/testimonials/clairvoyances-avis-1.png"
+                        src="/assets/images/testimonials/clairvoyances-avis-1.webp"
                         alt="Photo de Marie L."
                         width="50"
                         height="50"
@@ -463,14 +482,14 @@
                   </div>
                   <p class="testimonial-rating">INCROYABLE</p>
                   <p class="testimonial-text" itemprop="reviewBody">
-                    "J'étais sceptique au début, mais après ma consultation avec Thomas, j'ai été impressionné par sa
+                    "J'étais sceptique au début, mais après ma consultation avec Elsa, j'ai été impressionné par sa
                     capacité à identifier des détails précis de ma situation professionnelle. Ses conseils m'ont aidé à
                     prendre une décision importante."
                   </p>
                   <div class="testimonial-author-info">
                     <div class="testimonial-avatar">
                       <img
-                        src="/assets/images/testimonials/clairvoyances-avis-3.png"
+                        src="/assets/images/testimonials/clairvoyances-avis-3.webp"
                         alt="Photo de Pierre D."
                         width="50"
                         height="50"
@@ -502,14 +521,14 @@
                   </div>
                   <p class="testimonial-rating">FANTASTIQUE</p>
                   <p class="testimonial-text" itemprop="reviewBody">
-                    "Sophie a su me guider pendant une période très difficile. Sa lecture du tarot m'a apporté des
+                    "Blanche a su me guider pendant une période très difficile. Sa lecture du tarot m'a apporté des
                     éclaircissements et m'a permis de voir la lumière au bout du tunnel. Je la consulte régulièrement
                     depuis."
                   </p>
                   <div class="testimonial-author-info">
                     <div class="testimonial-avatar">
                       <img
-                        src="/assets/images/testimonials/clairvoyances-avis-5.png"
+                        src="/assets/images/testimonials/clairvoyances-avis-5.webp"
                         alt="Photo de Camille B."
                         width="50"
                         height="50"
@@ -541,13 +560,13 @@
                   </div>
                   <p class="testimonial-rating">REMARQUABLE</p>
                   <p class="testimonial-text" itemprop="reviewBody">
-                    "J'ai appelé pour une question concernant ma relation, et j'ai été mise en relation avec Marc. Sa
+                    "J'ai appelé pour une question concernant ma relation, et j'ai été mise en relation avec Kendji. Sa
                     médiumnité est extraordinaire, il a ressenti des choses que personne ne pouvait savoir."
                   </p>
                   <div class="testimonial-author-info">
                     <div class="testimonial-avatar">
                       <img
-                        src="/assets/images/testimonials/clairvoyances-avis-7.png"
+                        src="/assets/images/testimonials/clairvoyances-avis-7.webp"
                         alt="Photo de Julie M."
                         width="50"
                         height="50"
@@ -577,13 +596,13 @@
                   </div>
                   <p class="testimonial-rating">REMARQUABLE</p>
                   <p class="testimonial-text" itemprop="reviewBody">
-                    "J'ai appelé pour une question concernant ma relation, et j'ai été mise en relation avec Marc. Sa
-                    médiumnité est extraordinaire, il a ressenti des choses que personne ne pouvait savoir."
+                    "Incroyable comment Elisabeth a décrit mon futur partenaire sans aucune information. Quand je l'ai
+                    rencontré 2 mois après, c'était frappant de ressemblance."
                   </p>
                   <div class="testimonial-author-info">
                     <div class="testimonial-avatar">
                       <img
-                        src="/assets/images/testimonials/clairvoyances-avis-4.png"
+                        src="/assets/images/testimonials/clairvoyances-avis-4.webp"
                         alt="Photo de Julie M."
                         width="50"
                         height="50"
@@ -607,49 +626,10 @@
           </div>
         </div>
       </section>
-      <!-- Add structured data for testimonials for SEO -->
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Voyance par téléphone Clairvoyances",
-          "review": [
-            {
-              "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Marie L."
-              },
-              "datePublished": "2024-12-10",
-              "reviewBody": "J'ai consulté Elise pour la première fois il y a trois mois concernant ma vie amoureuse. Ses prédictions se sont réalisées avec une précision étonnante. Je recommande vivement ses services.",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              }
-            },
-            {
-              "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Pierre D."
-              },
-              "datePublished": "2024-11-25",
-              "reviewBody": "J'étais sceptique au début, mais après ma consultation avec Thomas, j'ai été impressionné par sa capacité à identifier des détails précis de ma situation professionnelle. Ses conseils m'ont aidé à prendre une décision importante.",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "4.5",
-                "bestRating": "5"
-              }
-            }
-            // Additional reviews would follow the same pattern
-          ]
-        }
-      </script>
       <section class="how-it-works-section" id="comment-ca-marche">
         <div class="section-container">
           <h2 class="section-title">Comment ça marche ?</h2>
-          <p class="section-subtitle">Découvrez notre processus de voyance en 3 étapes simples</p>
+          <p class="section-subtitle">Votre consultation de voyance en 3 étapes simples</p>
 
           <div class="steps-card">
             <div class="steps-content">
@@ -663,8 +643,9 @@
                   <h3 class="step-title">Posez votre question</h3>
                 </div>
                 <p class="step-description">
-                  Formulez clairement votre question sur l'amour, la carrière, la famille ou tout autre aspect de votre
-                  vie qui vous préoccupe.
+                  Prenez un moment pour formuler clairement ce qui vous préoccupe. Que ce soit une question sur l'amour,
+                  votre carrière, votre famille ou un autre aspect de votre vie, soyez précis et ouvert. Chaque détail
+                  compte.
                 </p>
               </div>
 
@@ -680,8 +661,9 @@
                   <h3 class="step-title">Consultation personnalisée</h3>
                 </div>
                 <p class="step-description">
-                  Nos voyants spécialisés vous offrent une consultation approfondie par téléphone, tchat ou SMS selon
-                  votre préférence.
+                  Un de nos voyants experts vous accompagne personnellement. Selon votre préférence, choisissez entre un
+                  entretien par téléphone, tchat ou SMS. Votre confort et votre tranquillité d'esprit sont notre
+                  priorité.
                 </p>
               </div>
 
@@ -699,6 +681,11 @@
                 <p class="step-description">
                   Recevez des réponses claires et des conseils pratiques pour vous guider vers un avenir plus serein et
                   prendre des décisions éclairées.
+                </p>
+                <br />
+                <p class="step-description">
+                  Rassurez-vous : chaque consultation est confidentielle, empathique et adaptée à votre situation
+                  unique.
                 </p>
               </div>
             </div>
@@ -755,7 +742,7 @@
       <section class="services-section" id="services-section">
         <div class="section-container">
           <h2 class="section-title">Nos modes de consultation</h2>
-          <p class="section-subtitle">Choisissez la méthode qui vous convient le mieux pour votre consultation</p>
+          <p class="section-subtitle">Votre voyance, à votre façon : choisissez le mode qui vous correspond vraiment</p>
 
           <div class="services-grid">
             <!-- Service Card 1: Question Gratuite -->
@@ -768,8 +755,8 @@
                 <h3 class="service-title">Question gratuite</h3>
               </div>
               <p class="service-description">
-                Posez votre première question sans frais et recevez une réponse claire et personnalisée de la part de
-                nos voyants expérimentés.
+                Posez votre question et recevez un éclairage immédiat, sans frais . Le moyen parfait de découvrir la
+                qualité de nos services en toute simplicité.
               </p>
               <div class="service-benefits">
                 <div class="benefit-badge">
@@ -786,7 +773,7 @@
                 </div>
               </div>
               <a href="/consultation/question-voyance-gratuite.html" class="service-link">
-                <span>Poser ma question gratuite</span>
+                <span>Je pose ma question gratuite</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -824,7 +811,7 @@
                 </div>
               </div>
               <a href="/consultation/voyance-par-telephone.html" class="service-link">
-                <span>Consulter par téléphone</span>
+                <span>Je consulte par téléphone</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -862,7 +849,7 @@
                 </div>
               </div>
               <a href="/consultation/se-faire-rappeler.html" class="service-link">
-                <span>Demander un rappel</span>
+                <span>Je demande un rappel</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -892,7 +879,7 @@
                 </div>
                 <div class="benefit-badge">
                   <i class="fa-solid fa-file-alt"></i>
-                  <span>Transcription conservée</span>
+                  <span>Transcription détaillée</span>
                 </div>
                 <div class="benefit-badge">
                   <i class="fa-solid fa-mobile-alt"></i>
@@ -900,7 +887,7 @@
                 </div>
               </div>
               <a href="/consultation/voyance-par-tchat.html" class="service-link">
-                <span>Démarrer un tchat</span>
+                <span>Je commence mon tchat</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -920,13 +907,12 @@
                 <h3 class="service-title">Sans CB</h3>
               </div>
               <p class="service-description">
-                Accédez à nos services de voyance sans carte bancaire, avec des options de paiement alternatives pour
-                votre confort.
+                Une voyance accessible à tous. Consultez sereinement, pas de surprise, que de la clarté.
               </p>
               <div class="service-benefits">
                 <div class="benefit-badge">
                   <i class="fa-solid fa-shield-alt"></i>
-                  <span>Paiement sécurisé</span>
+                  <span>Sécurisé</span>
                 </div>
                 <div class="benefit-badge">
                   <i class="fa-solid fa-wallet"></i>
@@ -938,7 +924,7 @@
                 </div>
               </div>
               <a href="/consultation/voyance-sans-cb.html" class="service-link">
-                <span>Consulter sans CB</span>
+                <span>Je consulte sans CB</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -976,7 +962,7 @@
                 </div>
               </div>
               <a href="/consultation/voyance-par-sms.html" class="service-link">
-                <span>Consulter par SMS</span>
+                <span>Je reçois un SMS</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -998,7 +984,7 @@
       <section class="services-section divinatory-section" id="divinatory-section">
         <div class="section-container">
           <h2 class="section-title">Arts divinatoires</h2>
-          <p class="section-subtitle">Explorez nos différentes méthodes de prédiction et d'interprétation</p>
+          <p class="section-subtitle">Trouvez des réponses précises à vos questions de vie</p>
 
           <div class="services-grid">
             <!-- Divinatory Card 1: Voyance -->
@@ -1029,7 +1015,7 @@
                 </div>
               </div>
               <a href="/divination/voyance.html" class="service-link">
-                <span>En savoir plus sur la voyance</span>
+                <span>Je découvre mon avenir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -1049,7 +1035,7 @@
               </div>
               <p class="service-description">
                 Établissez un contact avec le monde spirituel grâce à nos médiums qui servent de canal entre les
-                énergies et vous.
+                énergies et vous. Trouvez la paix intérieure.
               </p>
               <div class="service-benefits">
                 <div class="benefit-badge">
@@ -1062,11 +1048,11 @@
                 </div>
                 <div class="benefit-badge">
                   <i class="fa-solid fa-infinity"></i>
-                  <span>Connexion au-delà</span>
+                  <span>Connexion intense</span>
                 </div>
               </div>
               <a href="/divination/mediumnite.html" class="service-link">
-                <span>Découvrir la médiumnité</span>
+                <span>Je contacte un médium</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -1103,7 +1089,7 @@
                 </div>
               </div>
               <a href="/divination/tarologie.html" class="service-link">
-                <span>Explorer le Tarot</span>
+                <span>Je me fais tirer les cartes</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -1140,7 +1126,7 @@
                 </div>
               </div>
               <a href="/divination/numerologie.html" class="service-link">
-                <span>Comprendre la numérologie</span>
+                <span>Je contacte un numérologue</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -1177,7 +1163,7 @@
                 </div>
               </div>
               <a href="/divination/astrologie.html" class="service-link">
-                <span>Consulter l'astrologie</span>
+                <span>Je contacte un astrologue</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
               <div class="service-badge">
@@ -1199,7 +1185,7 @@
       <section class="faq-section" id="faq">
         <div class="section-container">
           <h2 class="section-title">Questions fréquentes</h2>
-          <p class="section-subtitle">Tout ce que vous devez savoir sur nos services de voyance</p>
+          <p class="section-subtitle">Tout ce que vous devez savoir sur votre voyance</p>
 
           <div class="faq-container">
             <!-- FAQ Item 1 -->
@@ -1209,14 +1195,17 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="faq-answer">
-                <p>Une consultation de voyance par téléphone chez Clairvoyances se déroule en plusieurs étapes :</p>
+                <p>
+                  Une consultation, c'est comme un rendez-vous avec vous-même. Après avoir posé votre question, notre
+                  voyant :
+                </p>
                 <ol>
-                  <li>Vous nous contactez au 04 23 09 24 23 ou vous demandez à être rappelé.</li>
-                  <li>Nous vous mettons en relation avec le voyant ou médium le plus adapté à votre situation.</li>
                   <li>
-                    Après avoir posé votre question, le voyant se connecte à son don et utilise ses outils de divination
-                    (tarot, pendule, numérologie, etc.) pour vous apporter des réponses claires.
+                    Se connecte à son don et utilise ses outils de divination (tarot, pendule, numérologie, etc.) pour
+                    vous apporter des réponses claires.
                   </li>
+                  <li>Prend le temps de vous écouter</li>
+                  <li>Répond à vos interrogations avec bienveillance</li>
                   <li>La consultation dure en moyenne 20 à 30 minutes, selon vos besoins et questions.</li>
                 </ol>
                 <p>
@@ -1233,19 +1222,13 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="faq-answer">
-                <p>
-                  Oui, Clairvoyances vous offre votre première question gratuite. Cette consultation initiale vous
-                  permet de :
-                </p>
+                <p>Oui, à 100% ! Nous vous offrons :</p>
                 <ul>
-                  <li>Découvrir la qualité de nos services</li>
+                  <li>Une première question sans frais</li>
                   <li>Établir un premier contact avec nos voyants</li>
                   <li>Obtenir une réponse précise à une question qui vous préoccupe</li>
                 </ul>
-                <p>
-                  Cette offre est sans engagement et vous permet d'évaluer la précision de nos consultations avant de
-                  poursuivre avec des services plus approfondis.
-                </p>
+                <p>C'est notre façon de vous montrer la qualité de notre expertise.</p>
               </div>
             </div>
 
@@ -1266,8 +1249,8 @@
                 <p>
                   <strong>La médiumnité</strong>
                   est la faculté de communiquer avec le monde spirituel et de servir d'intermédiaire entre ce monde et
-                  le nôtre. Les médiums peuvent entrer en contact avec des énergies, des guides spirituels ou des
-                  proches décédés pour transmettre des messages.
+                  le nôtre. Les médiums peuvent entrer en contact avec des énergies, des guides spirituels pour
+                  transmettre des messages.
                 </p>
                 <p>
                   Chez Clairvoyances, certains de nos consultants possèdent les deux dons, tandis que d'autres se
@@ -1325,15 +1308,15 @@
                   </li>
                   <li>
                     <strong>Finances</strong>
-                    : opportunités financières, investissements, périodes favorables
+                    : opportunités financières, périodes favorables
                   </li>
                   <li>
                     <strong>Famille</strong>
-                    : relations familiales, maternité, éducation des enfants
+                    : relations familiales, éducation des enfants
                   </li>
                   <li>
-                    <strong>Santé</strong>
-                    : bien-être général et équilibre (sans remplacer un avis médical)
+                    <strong>Bien-être</strong>
+                    : bien-être général et équilibre
                   </li>
                   <li>
                     <strong>Spiritualité</strong>
@@ -1378,6 +1361,64 @@
           </div>
         </div>
       </section>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Comment se déroule une consultation de voyance par téléphone ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Une consultation de voyance par téléphone chez Clairvoyances se déroule en plusieurs étapes : Vous nous contactez au 04 23 09 24 23 ou vous demandez à être rappelé. Nous vous mettons en relation avec le voyant ou médium le plus adapté à votre situation. Après avoir posé votre question, le voyant se connecte à son don et utilise ses outils de divination (tarot, pendule, numérologie, etc.) pour vous apporter des réponses claires. La consultation dure en moyenne 20 à 30 minutes, selon vos besoins et questions. Nos voyants vous garantissent confidentialité, respect et bienveillance tout au long de votre consultation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Est-ce que la première consultation est vraiment gratuite ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, Clairvoyances vous offre votre première question gratuite. Cette consultation initiale vous permet de découvrir la qualité de nos services, d'établir un premier contact avec nos voyants, et d'obtenir une réponse précise à une question qui vous préoccupe. Cette offre est sans engagement et vous permet d'évaluer la précision de nos consultations avant de poursuivre avec des services plus approfondis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelles sont les différences entre voyance et médiumnité ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La voyance et la médiumnité sont deux pratiques distinctes mais complémentaires. La voyance est la capacité à percevoir des informations sur le passé, le présent et le futur d'une personne grâce à des dons de clairvoyance. Les voyants peuvent utiliser des supports comme le tarot, les runes ou la numérologie pour renforcer leurs perceptions. La médiumnité est la faculté de communiquer avec le monde spirituel et de servir d'intermédiaire entre ce monde et le nôtre. Les médiums peuvent entrer en contact avec des énergies, des guides spirituels ou des proches décédés pour transmettre des messages. Chez Clairvoyances, certains de nos consultants possèdent les deux dons, tandis que d'autres se spécialisent dans l'une de ces pratiques."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment choisir le bon voyant pour ma situation ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pour choisir le voyant le plus adapté à votre situation : Identifiez votre besoin : amour, travail, finances, spiritualité, etc. Considérez la spécialité : certains voyants excellent en tarologie, d'autres en médiumnité ou en numérologie. Fiez-vous à votre intuition : un bon rapport énergétique est essentiel pour une consultation réussie. Notre service client peut également vous guider vers le praticien le plus adapté à votre questionnement. N'hésitez pas à nous contacter pour obtenir des conseils personnalisés sur le choix de votre voyant."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sujets puis-je aborder lors d'une consultation ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vous pouvez aborder de nombreux sujets lors d'une consultation de voyance : Amour et relations : rencontres amoureuses, compatibilité, évolution de couple, rupture, divorce. Carrière et travail : évolution professionnelle, changement d'emploi, conflits au travail. Finances : opportunités financières, investissements, périodes favorables. Famille : relations familiales, maternité, éducation des enfants. Santé : bien-être général et équilibre (sans remplacer un avis médical). Spiritualité : évolution spirituelle, mission de vie, connexion avec des énergies. Nos voyants respectent votre vie privée et traitent toutes vos questions avec la plus grande confidentialité."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Les prédictions sont-elles toujours exactes ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les prédictions de voyance sont basées sur les énergies présentes au moment de la consultation et sur les tendances qui se dessinent pour l'avenir. Elles offrent une vision des probabilités les plus fortes, mais plusieurs facteurs peuvent influencer leur réalisation : Le libre arbitre et les choix que vous faites, les actions des personnes impliquées dans votre situation, les changements énergétiques qui peuvent survenir. Nos voyants ont un taux élevé de précision (4.8/5 selon nos clients), mais il est important de comprendre que la voyance est un guide pour vous aider à prendre les meilleures décisions, et non une science exacte. La clarté de vos questions et votre ouverture d'esprit contribuent également à la précision des réponses obtenues."
+              }
+            }
+          ]
+        }
+      </script>
+
       <section class="info-section" id="info">
         <div class="section-container">
           <div class="info-content">
@@ -1395,7 +1436,7 @@
               <div class="info-highlight-content">
                 <p>
                   <strong>Saviez-vous que...</strong>
-                  Selon notre étude interne, 78% de nos clients qui consultent régulièrement un voyant affirment
+                  Selon notre étude interne, 87% de nos clients qui consultent régulièrement un voyant affirment
                   ressentir une réduction significative de leur niveau d'anxiété face à l'avenir.
                 </p>
               </div>
@@ -1540,63 +1581,6 @@
           </div>
         </div>
       </section>
-      <!-- Add structured data for FAQ for SEO -->
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Comment se déroule une consultation de voyance par téléphone ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Une consultation de voyance par téléphone chez Clairvoyances se déroule en plusieurs étapes : Vous nous contactez au 04 23 09 24 23 ou vous demandez à être rappelé. Nous vous mettons en relation avec le voyant ou médium le plus adapté à votre situation. Après avoir posé votre question, le voyant se connecte à son don et utilise ses outils de divination (tarot, pendule, numérologie, etc.) pour vous apporter des réponses claires. La consultation dure en moyenne 20 à 30 minutes, selon vos besoins et questions. Nos voyants vous garantissent confidentialité, respect et bienveillance tout au long de votre consultation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Est-ce que la première consultation est vraiment gratuite ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui, Clairvoyances vous offre votre première question gratuite. Cette consultation initiale vous permet de découvrir la qualité de nos services, d'établir un premier contact avec nos voyants, et d'obtenir une réponse précise à une question qui vous préoccupe. Cette offre est sans engagement et vous permet d'évaluer la précision de nos consultations avant de poursuivre avec des services plus approfondis."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelles sont les différences entre voyance et médiumnité ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La voyance et la médiumnité sont deux pratiques distinctes mais complémentaires. La voyance est la capacité à percevoir des informations sur le passé, le présent et le futur d'une personne grâce à des dons de clairvoyance. Les voyants peuvent utiliser des supports comme le tarot, les runes ou la numérologie pour renforcer leurs perceptions. La médiumnité est la faculté de communiquer avec le monde spirituel et de servir d'intermédiaire entre ce monde et le nôtre. Les médiums peuvent entrer en contact avec des énergies, des guides spirituels ou des proches décédés pour transmettre des messages. Chez Clairvoyances, certains de nos consultants possèdent les deux dons, tandis que d'autres se spécialisent dans l'une de ces pratiques."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment choisir le bon voyant pour ma situation ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Pour choisir le voyant le plus adapté à votre situation : Identifiez votre besoin : amour, travail, finances, spiritualité, etc. Considérez la spécialité : certains voyants excellent en tarologie, d'autres en médiumnité ou en numérologie. Fiez-vous à votre intuition : un bon rapport énergétique est essentiel pour une consultation réussie. Notre service client peut également vous guider vers le praticien le plus adapté à votre questionnement. N'hésitez pas à nous contacter pour obtenir des conseils personnalisés sur le choix de votre voyant."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quels sujets puis-je aborder lors d'une consultation ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Vous pouvez aborder de nombreux sujets lors d'une consultation de voyance : Amour et relations : rencontres amoureuses, compatibilité, évolution de couple, rupture, divorce. Carrière et travail : évolution professionnelle, changement d'emploi, conflits au travail. Finances : opportunités financières, investissements, périodes favorables. Famille : relations familiales, maternité, éducation des enfants. Santé : bien-être général et équilibre (sans remplacer un avis médical). Spiritualité : évolution spirituelle, mission de vie, connexion avec des énergies. Nos voyants respectent votre vie privée et traitent toutes vos questions avec la plus grande confidentialité."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Les prédictions sont-elles toujours exactes ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Les prédictions de voyance sont basées sur les énergies présentes au moment de la consultation et sur les tendances qui se dessinent pour l'avenir. Elles offrent une vision des probabilités les plus fortes, mais plusieurs facteurs peuvent influencer leur réalisation : Le libre arbitre et les choix que vous faites, les actions des personnes impliquées dans votre situation, les changements énergétiques qui peuvent survenir. Nos voyants ont un taux élevé de précision (4.8/5 selon nos clients), mais il est important de comprendre que la voyance est un guide pour vous aider à prendre les meilleures décisions, et non une science exacte. La clarté de vos questions et votre ouverture d'esprit contribuent également à la précision des réponses obtenues."
-              }
-            }
-          ]
-        }
-      </script>
     </main>
     <footer class="site-footer" role="contentinfo">
       <div class="footer-container">
@@ -1604,7 +1588,7 @@
           <div class="footer-logo">
             <a href="/" title="Accueil Clairvoyances" aria-label="Retour à l'accueil">
               <img
-                src="/assets/images/clairvoyances-logo.png"
+                src="/assets/images/clairvoyances-logo.webp"
                 alt="Logo Clairvoyances - Voyance en ligne"
                 width="180"
                 height="70"
@@ -1699,7 +1683,7 @@
                   <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://www.instagram.com/clairvoyances"
+                  href="#"
                   title="Instagram Clairvoyances"
                   target="_blank"
                   rel="noopener"
@@ -1707,7 +1691,7 @@
                   <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://twitter.com/clairvoyances"
+                  href="#"
                   title="Twitter Clairvoyances"
                   target="_blank"
                   rel="noopener"
@@ -1715,7 +1699,7 @@
                   <i class="fa-brands fa-twitter" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/clairvoyances"
+                  href="#"
                   title="YouTube Clairvoyances"
                   target="_blank"
                   rel="noopener"
@@ -1792,22 +1776,5 @@
         </div>
       </div>
     </footer>
-    <!-- Add structured data for local business if applicable -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Comment fonctionne la voyance par téléphone ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nos voyants et médiums vous offrent des consultations personnalisées par téléphone. Appelez simplement notre numéro pour être mis en relation avec un professionnel qualifié qui répondra à vos questions."
-            }
-          }
-        ]
-      }
-    </script>
   </body>
 </html>

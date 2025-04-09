@@ -59,7 +59,7 @@
   resize: none;
   overflow: hidden;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: var(--font-size-lg);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
