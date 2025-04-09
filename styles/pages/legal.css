@@ -1,0 +1,102 @@
+@import "/styles/base/variables.css";
+@import "/styles/base/resets-fonts.css";
+
+@import "/styles/components/header.css";
+@import "/styles/components/hero.css";
+@import "/styles/components/testimonials.css";
+@import "/styles/components/how-it-works.css";
+@import "/styles/components/cta-compact.css";
+@import "/styles/components/services.css";
+@import "/styles/components/faq.css";
+@import "/styles/pages/home.css";
+@import "/styles/components/footer.css";
+
+@import "/styles/base/fontawesome.css";
+
+.legal-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 7rem auto 3rem;
+  padding: var(--spacing-md);
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-settings);
+}
+
+.legal-container h1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--main-color);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.legal-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--main-color);
+  border-radius: 3px;
+}
+
+.legal-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.legal-section h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--spacer-color);
+}
+
+.legal-section p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.legal-section ul,
+.legal-section ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.legal-section li {
+  margin-bottom: var(--spacing-xs);
+}
+
+@media (min-width: 768px) {
+  .legal-container {
+    padding: var(--spacing-lg);
+  }
+
+  .legal-container h1 {
+    font-size: calc(var(--font-size-xl) * 1.2);
+  }
+
+  .legal-section h2 {
+    font-size: calc(var(--font-size-lg) * 1.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .legal-container {
+    padding: var(--spacing-xl);
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .legal-container {
+    margin-top: 9rem;
+  }
+}
