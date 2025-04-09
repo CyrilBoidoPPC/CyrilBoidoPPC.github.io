@@ -185,6 +185,8 @@
 
 /* Fix for the country code dropdown */
 .country-code-dropdown {
+  display: flex;
+  align-items: center;
   position: relative;
   padding-right: 5px;
   max-width: 110px; /* Set max-width to prevent overflow */
