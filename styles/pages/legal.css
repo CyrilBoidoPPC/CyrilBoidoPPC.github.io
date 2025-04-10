@@ -74,6 +74,63 @@
   margin-bottom: var(--spacing-xs);
 }
 
+/* Additional styles for legal pages */
+
+/* Download link styling */
+.download-link {
+  display: inline-block;
+  color: var(--main-color);
+  text-decoration: underline;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.download-link:hover {
+  color: var(--hoover-color);
+}
+
+/* Attention text and uppercase text */
+.attention-text,
+.uppercase-text {
+  font-weight: var(--font-weight-medium);
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.attention-text {
+  background-color: rgba(222, 23, 149, 0.05);
+  padding: var(--spacing-sm);
+  border-left: 3px solid var(--main-color);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Third level headings in legal sections */
+.legal-section h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--main-color);
+  margin: var(--spacing-md) 0 var(--spacing-xs);
+}
+
+/* Improved list styling */
+.legal-section ul {
+  list-style-type: disc;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.legal-section ul li {
+  margin-bottom: calc(var(--spacing-xs) / 2);
+}
+
+@media (min-width: 768px) {
+  .legal-section h3 {
+    font-size: calc(var(--font-size-base) * 1.1);
+  }
+}
+
 @media (min-width: 768px) {
   .legal-container {
     padding: var(--spacing-lg);
@@ -99,4 +156,292 @@
   .legal-container {
     margin-top: 9rem;
   }
+}
+
+/* Additional styles for the retraction form - to be added to legal.css */
+
+/* Form container */
+.retraction-form {
+  max-width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: var(--font-size-base);
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(222, 23, 149, 0.1);
+}
+
+/* Textarea styling */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Required field indicator */
+.required {
+  color: var(--main-color);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Checkbox group */
+.checkbox-group {
+  margin-top: var(--spacing-xs);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xs);
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-top: 5px;
+  margin-right: var(--spacing-xs);
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.checkbox-item label {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-weight: var(--font-weight-normal);
+}
+
+/* Submit button */
+.submit-button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--hoover-color);
+  transform: translateY(-2px);
+  box-shadow: var(--btn-box-shadow);
+}
+
+.form-actions {
+  margin-top: var(--spacing-lg);
+}
+
+/* Form info */
+.form-info {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background-color: rgba(222, 23, 149, 0.05);
+  border-left: 3px solid var(--main-color);
+  border-radius: 8px;
+}
+
+.form-info p {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+}
+
+.form-info p:last-child {
+  margin-bottom: 0;
+}
+
+.form-info i {
+  color: var(--main-color);
+  margin-right: var(--spacing-xs);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .retraction-form {
+    margin-top: var(--spacing-xl);
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+/* Fix for long checkbox label text */
+.checkbox-item label {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  max-width: calc(100% - 30px);
+}
+
+/* Additional styles for the contact form - to be added to legal.css */
+
+/* Contact container */
+.contact-container {
+  max-width: 1000px;
+}
+
+/* Form styling - inherits most styles from retraction-form */
+.contact-form {
+  max-width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+/* Select box styling */
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: var(--font-size-base);
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.75rem) center;
+  padding-right: 2rem;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(222, 23, 149, 0.1);
+}
+
+/* Consent group specific styles */
+.consent-group {
+  margin-top: var(--spacing-md);
+  background-color: #f9f9f9;
+  padding: var(--spacing-sm);
+  border-radius: 8px;
+}
+
+/* Contact info section */
+.contact-info-container {
+  margin-top: var(--spacing-xxl);
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--spacer-color);
+}
+
+.contact-info h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--badge-color);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-method:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow-card);
+}
+
+.contact-method i {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  margin-top: 0.25rem;
+}
+
+.contact-method h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--main-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.contact-method p {
+  margin-bottom: calc(var(--spacing-xs) / 2);
+  font-size: var(--font-size-base);
+}
+
+.contact-method a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: var(--main-color);
+}
+
+.contact-details {
+  font-size: var(--font-size-sm);
+  color: var(--light-text-color);
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: #aaa;
+  opacity: 0.7;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .contact-methods {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-method {
+    flex: 0 0 calc(50% - var(--spacing-md));
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-method {
+    flex: 0 0 calc(33.33% - var(--spacing-md));
+  }
+}
+
+a,
+p,
+li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
