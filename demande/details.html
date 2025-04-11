@@ -1,18 +1,67 @@
 <html lang="fr-FR">
   <head>
+    <!-- Tu n'as rien à faire ici.. -->
     <meta charset="UTF-8" />
+    <title>Votre contact | Clairvoyances.fr</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" crossorigin />
+    <link rel="dns-prefetch preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preload" href="/assets/fonts/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/images/clairvoyances-voyance-en-ligne.webp" as="image" />
+
+    <link rel="canonical" href="https://www.clairvoyances.fr/demande/confirmation" />
+
     <link rel="stylesheet" href="/styles/pages/details.css" />
     <script type="module" src="/scripts/demandeDetails.js"></script>
+
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+    <meta name="description" content="Votre demande a bien été prise en compte" />
+    <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/images/favicon/clairvoyances-icon.svg" color="#de1795" />
     <meta name="theme-color" content="#de1795" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Votre contact | Consultation avec un voyant | Clairvoyances.fr</title>
+
+    <meta property="og:title" content="Confirmation | Clairvoyances.fr" />
+    <meta property="og:description" content="Votre demande a bien été prise en compte" />
+    <meta property="og:image" content="https://www.clairvoyances.fr/assets/images/clairvoyances-voyance-en-ligne.png" />
+    <meta property="og:url" content="https://www.clairvoyances.fr/demande/confirmation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clairvoyances" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="fb:pages" content="100087468905703" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Confirmation | Clairvoyances.fr" />
+    <meta name="twitter:description" content="Votre demande a bien été prise en compte" />
+    <meta
+      name="twitter:image"
+      content="https://www.clairvoyances.fr/assets/images/clairvoyances-voyance-en-ligne.png" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CLQ9WT");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <header>
       <nav class="navbar" aria-label="Navigation principale">
         <a class="header-logo" href="/" title="Accueil Clairvoyances">
           <img
-            src="/assets/images/clairvoyances-logo.png"
+            src="/assets/images/clairvoyances-logo.webp"
             alt="Logo Clairvoyances - Voyance en ligne"
             width="200"
             height="80" />
@@ -57,7 +106,10 @@
 
             <ul class="dropdown-menu" id="consultations-menu" role="menu" aria-label="Options de consultation">
               <li role="none">
-                <a href="/question-de-voyance" role="menuitem" title="Posez votre question de voyance">
+                <a
+                  href="/consultation/question-voyance-gratuite.html"
+                  role="menuitem"
+                  title="Posez votre question de voyance">
                   <i class="fa-solid fa-question menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Question gratuite</span>
@@ -66,7 +118,10 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/voyance-telephone" role="menuitem" title="Consultation de voyance par téléphone">
+                <a
+                  href="/consultation/voyance-par-telephone.html"
+                  role="menuitem"
+                  title="Consultation de voyance par téléphone">
                   <i class="fa-solid fa-mobile-screen-button menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Par téléphone</span>
@@ -75,7 +130,10 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/demande-rappel" role="menuitem" title="Demandez à être rappelé par un voyant">
+                <a
+                  href="/consultation/se-faire-rappeler.html"
+                  role="menuitem"
+                  title="Demandez à être rappelé par un voyant">
                   <i class="fa-solid fa-phone-volume menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Se faire rappeler</span>
@@ -84,7 +142,10 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/voyance-par-tchat" role="menuitem" title="Consultation de voyance par tchat">
+                <a
+                  href="/consultation/voyance-par-tchat.html"
+                  role="menuitem"
+                  title="Consultation de voyance par tchat">
                   <i class="fa-solid fa-comments menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Par tchat</span>
@@ -93,7 +154,7 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/voyance-sans-cb" role="menuitem" title="Voyance sans carte bancaire">
+                <a href="/consultation/voyance-sans-cb.html" role="menuitem" title="Voyance sans carte bancaire">
                   <i class="fa-solid fa-credit-card menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Sans CB</span>
@@ -102,7 +163,7 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/voyance-par-sms" role="menuitem" title="Consultation de voyance par SMS">
+                <a href="/consultation/voyance-par-sms.html" role="menuitem" title="Consultation de voyance par SMS">
                   <i class="fa-solid fa-sms menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Par SMS</span>
@@ -141,7 +202,7 @@
               role="menu"
               aria-label="Arts divinatoires disponibles">
               <li role="none">
-                <a href="/voyance" role="menuitem" title="Consultation de voyance">
+                <a href="/divination/voyance.html" role="menuitem" title="Consultation de voyance">
                   <i class="fa-solid fa-eye menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Voyance</span>
@@ -150,7 +211,7 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/medium" role="menuitem" title="Consultation avec un médium">
+                <a href="/divination/mediumnite.html" role="menuitem" title="Consultation avec un médium">
                   <i class="fa-solid fa-hands-holding-child menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Médiumnité</span>
@@ -159,7 +220,7 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/tarot" role="menuitem" title="Consultation par le tarot">
+                <a href="/divination/tarologie.html" role="menuitem" title="Consultation par le tarot">
                   <i class="fa-solid fa-rectangle-list menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Tarologie</span>
@@ -168,7 +229,7 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/numerologie" role="menuitem" title="Consultation en numérologie">
+                <a href="/divination/numerologie.html" role="menuitem" title="Consultation en numérologie">
                   <i class="fa-solid fa-hashtag menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Numérologie</span>
@@ -177,7 +238,7 @@
                 </a>
               </li>
               <li role="none">
-                <a href="/astrologie" role="menuitem" title="Consultation avec un astrologue">
+                <a href="/divination/astrologie.html" role="menuitem" title="Consultation avec un astrologue">
                   <i class="fa-solid fa-star menu-icon" aria-hidden="true"></i>
                   <div class="menu-text">
                     <span class="menu-title">Astrologie</span>
@@ -466,7 +527,7 @@
           <div class="footer-logo">
             <a href="/" title="Accueil Clairvoyances" aria-label="Retour à l'accueil">
               <img
-                src="/assets/images/clairvoyances-logo.png"
+                src="/assets/images/clairvoyances-logo.webp"
                 alt="Logo Clairvoyances - Voyance en ligne"
                 width="180"
                 height="70"
@@ -561,7 +622,7 @@
                   <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://www.instagram.com/clairvoyances"
+                  href="#"
                   title="Instagram Clairvoyances"
                   target="_blank"
                   rel="noopener"
@@ -569,7 +630,7 @@
                   <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://twitter.com/clairvoyances"
+                  href="#"
                   title="Twitter Clairvoyances"
                   target="_blank"
                   rel="noopener"
@@ -577,7 +638,7 @@
                   <i class="fa-brands fa-twitter" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/clairvoyances"
+                  href="#"
                   title="YouTube Clairvoyances"
                   target="_blank"
                   rel="noopener"
@@ -602,8 +663,6 @@
                   name="email"
                   id="footer-email"
                   placeholder="Votre adresse email"
-                  autocomplete="email"
-                  maxlength="100"
                   required
                   aria-required="true" />
                 <button type="submit" class="newsletter-button">
